@@ -1,42 +1,61 @@
-# Clinical AI Support Interface for CISAM/UPE
+# Interface de IA para Saúde - Projeto COMPET-CISAM/UPE
 
-This project is a highly customized fork of [Open WebUI](https://github.com/open-webui/open-webui), specifically adapted for a healthcare AI initiative at the **Centro Integrado de Saúde Amaury de Medeiros (CISAM)**, a reference hospital of the University of Pernambuco (UPE) in Brazil.
+> **Status:** 🚧 Em desenvolvimento ativo 🚧
 
-The platform transforms the general-purpose UI into a secure, specialized, and intuitive interface designed to support clinicians, residents, and researchers in the fields of Women's Health, High-Risk Obstetrics, and Neonatology. It serves as the primary frontend for interacting with specialized, locally-hosted Large Language Models (LLMs).
+![Demonstração da Interface](https://raw.githubusercontent.com/compet-cisam/interface/main/static/upe.png)
 
-## 🎯 Project Mission
+Este repositório contém o código-fonte de uma interface web customizada, baseada no [Open WebUI](https://github.com/open-webui/open-webui), para um projeto de Inteligência Artificial na área da saúde. A iniciativa é uma colaboração do grupo de extensão e pesquisa **COMPET** com o **Centro Integrado de Saúde Amaury de Medeiros (CISAM)** da **Universidade de Pernambuco (UPE)**, em Recife.
 
-Our goal is to augment the capabilities of healthcare professionals by providing a powerful AI assistant that understands the specific clinical context of CISAM. We aim to improve efficiency, support clinical decision-making, and enhance medical training, all within a secure, on-premises environment that guarantees patient data privacy.
+A plataforma foi adaptada para servir como um ambiente seguro e intuitivo para interação com modelos de linguagem especializados, focados em apoiar profissionais, residentes e pesquisadores das áreas de Saúde da Mulher, Obstetrícia e Neonatologia.
 
-## ✨ Key Features & Modifications
+## ✨ Principais Funcionalidades e Customizações
 
-* **🔒 Enhanced Security & Compliance:**
-    * Designed for **on-premises deployment** to ensure that sensitive patient data never leaves the hospital's secure infrastructure.
-    * Built-in data anonymization features and strict access control mechanisms to comply with data protection regulations like LGPD (Brazil's General Data Protection Law).
+* **Interface Adaptada:** A interface foi modificada para refletir a identidade visual da UPE e otimizar o fluxo de trabalho dos profissionais de saúde do CISAM.
+* **Segurança e Privacidade (On-Premises):** Projetado para rodar em servidores locais (on-premises), garantindo que nenhum dado sensível de paciente seja exposto externamente, em conformidade com a Lei Geral de Proteção de Dados (LGPD).
+* **Assistente Especializado:** Conecta-se a modelos de IA que podem ser treinados para fornecer apoio à decisão clínica, sumarizar documentos, e acessar rapidamente protocolos e literatura médica relevante.
+* **Foco no Usuário Clínico:** Componentes como o chat, entrada de texto e diálogos foram ajustados para as necessidades de um ambiente hospitalar.
+* **Potencial para Ensino:** A ferramenta pode ser usada como um ambiente de simulação para o treinamento de residentes e estudantes, permitindo a exploração segura de casos clínicos.
 
-* **🩺 Specialized AI Assistant:**
-    * Interacts with fine-tuned LLMs trained on medical literature and protocols relevant to Gynecology, Obstetrics, and Neonatology.
-    * Provides support for differential diagnoses, reviews clinical guidelines, and suggests up-to-date scientific literature.
+## 🛠️ Tecnologias Utilizadas
 
-* **📊 Clinical Decision Support:**
-    * Enables the analysis of **anonymized** clinical data to identify patterns in high-risk pregnancies, rare gynecological conditions, or neonatal complications.
-    * Acts as a qualified "second opinion" to support complex medical evaluations.
+* **Frontend:** SvelteKit
+* **Backend:** Python (através do Open WebUI)
+* **Containerização:** Docker e Docker Compose
 
-* **✍️ Documentation & Workflow Optimization:**
-    * Tools for summarizing patient records, generating draft reports, and organizing clinical notes.
-    * Frees up valuable time for healthcare professionals to focus on direct patient care.
+## 🚀 Como Executar o Projeto Localmente
 
-* **🎓 Training & Simulation Environment:**
-    * Provides a safe, interactive space for medical residents and students to explore complex clinical cases.
-    * Enhances the learning process with AI-driven feedback and scenarios.
+Siga os passos abaixo para ter a interface rodando em sua máquina.
 
-* **📚 Integrated Knowledge Base:**
-    * Offers contextual and fast access to a curated database of medical guidelines, institutional protocols from CISAM, and key research papers.
+### Pré-requisitos
 
-## ⚠️ Disclaimer
+* [Git](https://git-scm.com/)
+* [Docker](https://www.docker.com/products/docker-desktop/) e Docker Compose
 
-This tool is intended for **clinical support and research purposes only**. It is not a medical device and should not be used as a substitute for professional clinical judgment, diagnosis, or treatment. All information and suggestions provided by the AI must be independently verified by a qualified healthcare professional.
+### Instalação
 
-## 🤝 Contributing & Contact
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/compet-cisam/interface.git](https://github.com/compet-cisam/interface.git)
+    cd interface
+    ```
 
-This is an internal project for CISAM/UPE. For questions or collaboration inquiries, please contact the project lead.
+2.  **Configuração do Ambiente:**
+    Este projeto utiliza o `docker-compose.yaml` para orquestrar os serviços. Certifique-se de que o Docker esteja em execução na sua máquina.
+
+3.  **Inicie os containers:**
+    Na pasta raiz do projeto, execute o comando:
+    ```bash
+    docker-compose up -d --build
+    ```
+    * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
+
+4.  **Acesse a interface:**
+    Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
+    ```
+    http://localhost:8080
+    ```
+    *(A porta pode variar. Verifique o arquivo `docker-compose.yaml` se necessário).*
+
+## 🎯 Missão do Projeto
+
+O objetivo desta iniciativa é explorar o potencial da Inteligência Artificial generativa para criar ferramentas que aumentem a capacidade dos profissionais de saúde do CISAM, promovendo uma medicina mais ágil e baseada em dados, além de fomentar a inovação tecnológica no ambiente acadêmico da UPE.
