@@ -1,6 +1,6 @@
 # Interface de IA para Saúde - Projeto COMPET-CISAM/UPE
 
-> **Status:** 🚧 Em desenvolvimento ativo 🚧
+> **Status:** 🚧 Em desenvolvimento 🚧
 
 ![Demonstração da Interface](https://raw.githubusercontent.com/compet-cisam/interface/main/static/upe.png)
 
