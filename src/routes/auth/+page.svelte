@@ -223,7 +223,7 @@
 									{:else if mode === 'ldap'}
 										{$i18n.t(`Sign in to {{WEBUI_NAME}} with LDAP`, { WEBUI_NAME: $WEBUI_NAME })}
 									{:else if mode === 'signin'}
-										{$i18n.t(`Sign in to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
+										{$i18n.t(`Conectar ao Assistente Médico`)}
 									{:else}
 										{$i18n.t(`Sign up to {{WEBUI_NAME}}`, { WEBUI_NAME: $WEBUI_NAME })}
 									{/if}
@@ -277,7 +277,7 @@
 									{:else}
 										<div class="mb-2">
 											<label for="email" class="text-sm font-medium text-left mb-1 block"
-												>{$i18n.t('Email')}</label
+												>{'Email:'}</label
 											>
 											<input
 												bind:value={email}
@@ -286,7 +286,7 @@
 												class="my-0.5 w-full text-sm outline-hidden bg-transparent"
 												autocomplete="email"
 												name="email"
-												placeholder={$i18n.t('Enter Your Email')}
+												placeholder={$i18n.t('Seu email')}
 												required
 											/>
 										</div>
@@ -294,14 +294,14 @@
 
 									<div>
 										<label for="password" class="text-sm font-medium text-left mb-1 block"
-											>{$i18n.t('Password')}</label
+											>{'Senha:'}</label
 										>
 										<input
 											bind:value={password}
 											type="password"
 											id="password"
 											class="my-0.5 w-full text-sm outline-hidden bg-transparent"
-											placeholder={$i18n.t('Enter Your Password')}
+											placeholder={$i18n.t('Sua senha')}
 											autocomplete="current-password"
 											name="current-password"
 											required
@@ -324,7 +324,7 @@
 											type="submit"
 										>
 											{mode === 'signin'
-												? $i18n.t('Sign in')
+												? $i18n.t('Conectar')
 												: ($config?.onboarding ?? false)
 													? $i18n.t('Create Admin Account')
 													: $i18n.t('Create Account')}

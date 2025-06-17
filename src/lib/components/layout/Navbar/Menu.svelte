@@ -259,7 +259,7 @@
 					}}
 				>
 					<AdjustmentsHorizontal className=" size-4" strokeWidth="0.5" />
-					<div class="flex items-center">{$i18n.t('Controls')}</div>
+					<div class="flex items-center">{'Controles'}</div>
 				</DropdownMenu.Item>
 			{/if}
 
@@ -283,7 +283,7 @@
 							clip-rule="evenodd"
 						/>
 					</svg>
-					<div class="flex items-center">{$i18n.t('Share')}</div>
+					<div class="flex items-center">{'Compartilhar'}</div>
 				</DropdownMenu.Item>
 			{/if}
 

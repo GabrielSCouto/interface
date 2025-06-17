@@ -83,7 +83,7 @@
 								)
 									? ''
 									: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition"
-								href="/workspace/models">{$i18n.t('Models')}</a
+								href="/workspace/models">{'Modelos'}</a
 							>
 						{/if}
 
@@ -96,7 +96,7 @@
 									: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition"
 								href="/workspace/knowledge"
 							>
-								{$i18n.t('Knowledge')}
+								{'Conhecimento'}
 							</a>
 						{/if}
 
@@ -118,7 +118,7 @@
 									: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition"
 								href="/workspace/tools"
 							>
-								{$i18n.t('Tools')}
+								{'Ferramentas'}
 							</a>
 						{/if}
 					</div>

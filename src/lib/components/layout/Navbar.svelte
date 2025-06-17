@@ -116,7 +116,7 @@
 						</button>
 					</Menu>
 				{:else if $mobile}
-					<Tooltip content={$i18n.t('Controls')}>
+					<Tooltip content={'dsd'}>
 						<button
 							class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
 							on:click={async () => {

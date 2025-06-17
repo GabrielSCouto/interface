@@ -578,7 +578,7 @@
 		if (backendConfig) {
 			// Save Backend Status to Store
 			await config.set(backendConfig);
-			await WEBUI_NAME.set(backendConfig.name);
+			await WEBUI_NAME.set("Assistente médico");
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
@@ -635,13 +635,8 @@
 
 			document.getElementById('splash-screen')?.remove();
 
-			const audio = new Audio(`/audio/greeting.mp3`);
-			const playAudio = () => {
-				audio.play();
-				document.removeEventListener('click', playAudio);
-			};
-
-			document.addEventListener('click', playAudio);
+			// Removendo o audio de greeting
+			loaded = true;
 
 			loaded = true;
 		} else {
@@ -656,13 +651,10 @@
 </script>
 
 <svelte:head>
-	<title>{$WEBUI_NAME}</title>
-	<link crossorigin="anonymous" rel="icon" href="{WEBUI_BASE_URL}/static/favicon.png" />
-
-	<!-- rosepine themes have been disabled as it's not up to date with our latest version. -->
-	<!-- feel free to make a PR to fix if anyone wants to see it return -->
-	<!-- <link rel="stylesheet" type="text/css" href="/themes/rosepine.css" />
-	<link rel="stylesheet" type="text/css" href="/themes/rosepine-dawn.css" /> -->
+    <title>Assistente médico</title>
+    <meta name="apple-mobile-web-app-title" content="Assistente médico" />
+    <meta name="application-name" content="Assistente médico" />
+    <link crossorigin="anonymous" rel="icon" href="{WEBUI_BASE_URL}/static/favicon.png" />
 </svelte:head>
 
 {#if loaded}

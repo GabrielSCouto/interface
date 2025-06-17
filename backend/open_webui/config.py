@@ -956,34 +956,35 @@ try:
 except Exception as e:
     log.exception(f"Error loading DEFAULT_PROMPT_SUGGESTIONS: {e}")
     default_prompt_suggestions = []
+    
 if default_prompt_suggestions == []:
     default_prompt_suggestions = [
         {
-            "title": ["Help me study", "vocabulary for a college entrance exam"],
-            "content": "Help me study vocabulary: write a sentence for me to fill in the blank, and I'll try to pick the correct option.",
+            "title": ["Dicas de nutrição", "para uma alimentação saudável"],
+            "content": "Me dê 5 dicas práticas para melhorar minha alimentação no dia a dia, focando em alimentos acessíveis e nutritivos.",
         },
         {
-            "title": ["Give me ideas", "for what to do with my kids' art"],
-            "content": "What are 5 creative things I could do with my kids' art? I don't want to throw them away, but it's also so much clutter.",
+            "title": ["Exercícios simples", "para fazer em casa"],
+            "content": "Sugira uma rotina de exercícios de 15 minutos que posso fazer em casa, sem equipamentos especiais, ideal para iniciantes.",
         },
         {
-            "title": ["Tell me a fun fact", "about the Roman Empire"],
-            "content": "Tell me a random fun fact about the Roman Empire",
+            "title": ["Sono de qualidade", "melhorando o descanso"],
+            "content": "Quais são as melhores práticas para ter uma boa noite de sono? Me dê dicas específicas sobre horários, ambiente e rotina noturna.",
         },
         {
-            "title": ["Show me a code snippet", "of a website's sticky header"],
-            "content": "Show me a code snippet of a website's sticky header in CSS and JavaScript.",
+            "title": ["Gerenciando o estresse", "técnicas de relaxamento"],
+            "content": "Preciso de técnicas práticas para gerenciar o estresse do dia a dia. Pode me ensinar alguns exercícios de respiração e relaxamento?",
         },
         {
             "title": [
-                "Explain options trading",
-                "if I'm familiar with buying and selling stocks",
+                "Saúde preventiva",
+                "hábitos para uma vida mais saudável"
             ],
-            "content": "Explain options trading in simple terms if I'm familiar with buying and selling stocks.",
+            "content": "Quais são os exames preventivos mais importantes que devo fazer regularmente? Por favor, inclua recomendações específicas por idade e gênero.",
         },
         {
-            "title": ["Overcome procrastination", "give me tips"],
-            "content": "Could you start by asking me about instances when I procrastinate the most and then give me some suggestions to overcome it?",
+            "title": ["Saúde mental", "cuidados e atenção diária"],
+            "content": "Como posso cuidar melhor da minha saúde mental no dia a dia? Gostaria de dicas práticas e sinais importantes para ficar atento.",
         },
     ]
 

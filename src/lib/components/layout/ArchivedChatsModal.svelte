@@ -121,8 +121,8 @@
 
 <UnarchiveAllConfirmDialog
 	bind:show={showUnarchiveAllConfirmDialog}
-	message={$i18n.t('Are you sure you want to unarchive all archived chats?')}
-	confirmLabel={$i18n.t('Unarchive All')}
+	message={$i18n.t('Você tem certeza que deseja desarquivar todas as conversas?')}
+	confirmLabel={$i18n.t('Desarquivar Todos')}
 	on:confirm={() => {
 		unarchiveAllHandler();
 	}}
@@ -133,8 +133,8 @@
 	bind:query
 	bind:orderBy
 	bind:direction
-	title={$i18n.t('Archived Chats')}
-	emptyPlaceholder={$i18n.t('You have no archived conversations.')}
+	title={$i18n.t('Conversas Arquivadas')}
+	emptyPlaceholder={$i18n.t('Você não tem conversas arquivadas.')}
 	{chatList}
 	{allChatsLoaded}
 	{chatListLoading}
@@ -152,7 +152,7 @@
 					showUnarchiveAllConfirmDialog = true;
 				}}
 			>
-				{$i18n.t('Unarchive All Archived Chats')}
+				{$i18n.t('Desarquivar todas as conversas')}
 			</button>
 
 			<button
@@ -161,7 +161,7 @@
 					exportChatsHandler();
 				}}
 			>
-				{$i18n.t('Export All Archived Chats')}
+				{$i18n.t('Exportar todas as conversas')}
 			</button>
 		</div>
 	</div>

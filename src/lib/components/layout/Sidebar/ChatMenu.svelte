@@ -226,7 +226,7 @@
 		}
 	}}
 >
-	<Tooltip content={$i18n.t('More')}>
+	<Tooltip content={'Mais'}>
 		<slot />
 	</Tooltip>
 
@@ -246,10 +246,10 @@
 			>
 				{#if pinned}
 					<BookmarkSlash strokeWidth="2" />
-					<div class="flex items-center">{$i18n.t('Unpin')}</div>
+					<div class="flex items-center">{'Desfixar'}</div>
 				{:else}
 					<Bookmark strokeWidth="2" />
-					<div class="flex items-center">{$i18n.t('Pin')}</div>
+					<div class="flex items-center">{'Fixar'}</div>
 				{/if}
 			</DropdownMenu.Item>
 
@@ -260,7 +260,7 @@
 				}}
 			>
 				<Pencil strokeWidth="2" />
-				<div class="flex items-center">{$i18n.t('Rename')}</div>
+				<div class="flex items-center">{'Renomear'}</div>
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
@@ -270,7 +270,7 @@
 				}}
 			>
 				<DocumentDuplicate strokeWidth="2" />
-				<div class="flex items-center">{$i18n.t('Clone')}</div>
+				<div class="flex items-center">{'Clone'}</div>
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Item
@@ -280,7 +280,7 @@
 				}}
 			>
 				<ArchiveBox strokeWidth="2" />
-				<div class="flex items-center">{$i18n.t('Archive')}</div>
+				<div class="flex items-center">{'Arquivar'}</div>
 			</DropdownMenu.Item>
 
 			{#if $user?.role === 'admin' || ($user.permissions?.chat?.share ?? true)}
@@ -291,7 +291,7 @@
 					}}
 				>
 					<Share />
-					<div class="flex items-center">{$i18n.t('Share')}</div>
+					<div class="flex items-center">{'Compartilhar'}</div>
 				</DropdownMenu.Item>
 			{/if}
 
@@ -301,7 +301,7 @@
 				>
 					<Download strokeWidth="2" />
 
-					<div class="flex items-center">{$i18n.t('Download')}</div>
+					<div class="flex items-center">{'Baixar'}</div>
 				</DropdownMenu.SubTrigger>
 				<DropdownMenu.SubContent
 					class="w-full rounded-xl px-1 py-1.5 z-50 bg-white dark:bg-gray-850 dark:text-white shadow-lg"
@@ -315,7 +315,7 @@
 								downloadJSONExport();
 							}}
 						>
-							<div class="flex items-center line-clamp-1">{$i18n.t('Export chat (.json)')}</div>
+							<div class="flex items-center line-clamp-1">{$i18n.t('Exportar chat (.json)')}</div>
 						</DropdownMenu.Item>
 					{/if}
 
@@ -325,7 +325,7 @@
 							downloadTxt();
 						}}
 					>
-						<div class="flex items-center line-clamp-1">{$i18n.t('Plain text (.txt)')}</div>
+						<div class="flex items-center line-clamp-1">{$i18n.t('Texto simples (.txt)')}</div>
 					</DropdownMenu.Item>
 
 					<DropdownMenu.Item
@@ -334,7 +334,7 @@
 							downloadPdf();
 						}}
 					>
-						<div class="flex items-center line-clamp-1">{$i18n.t('PDF document (.pdf)')}</div>
+						<div class="flex items-center line-clamp-1">{$i18n.t('Documento PDF (.pdf)')}</div>
 					</DropdownMenu.Item>
 				</DropdownMenu.SubContent>
 			</DropdownMenu.Sub>
@@ -345,7 +345,7 @@
 				}}
 			>
 				<GarbageBin strokeWidth="2" />
-				<div class="flex items-center">{$i18n.t('Delete')}</div>
+				<div class="flex items-center">{'Excluir'}</div>
 			</DropdownMenu.Item>
 
 			<hr class="border-gray-100 dark:border-gray-850 my-0.5" />

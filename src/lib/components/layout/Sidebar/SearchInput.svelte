@@ -21,7 +21,7 @@
 	let options = [
 		{
 			name: 'tag:',
-			description: $i18n.t('search for tags')
+			description: $i18n.t('Pesquisar por tags')
 		}
 	];
 	let focused = false;
@@ -107,7 +107,7 @@
 
 		<input
 			class="w-full rounded-r-xl py-1.5 pl-2.5 text-sm bg-transparent dark:text-gray-300 outline-hidden"
-			placeholder={placeholder ? placeholder : $i18n.t('Search')}
+			placeholder='Pesquisar'
 			bind:value
 			on:input={() => {
 				dispatch('input');
@@ -160,6 +160,7 @@
 					on:click={clearSearchInput}
 				>
 					<XMark className="size-3" strokeWidth="2" />
+					
 				</button>
 			</div>
 		{/if}
@@ -213,7 +214,7 @@
 					</div>
 				{:else if filteredOptions.length > 0}
 					<div class="px-1 font-medium dark:text-gray-300 text-gray-700 mb-1">
-						{$i18n.t('Search options')}
+						{'Opções de pesquisa'}
 					</div>
 
 					<div class=" max-h-60 overflow-auto">

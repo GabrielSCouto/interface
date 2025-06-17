@@ -504,13 +504,13 @@
 					<div class="self-center mx-1.5">
 						<img
 							crossorigin="anonymous"
-							src="{WEBUI_BASE_URL}/static/favicon.png"
+							src="{WEBUI_BASE_URL}/favicon.png"
 							class=" size-5 -translate-x-1.5 rounded-full"
 							alt="logo"
 						/>
 					</div>
 					<div class=" self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
-						{$i18n.t('New Chat')}
+						{$i18n.t('Novo chat')}
 					</div>
 				</div>
 
@@ -559,7 +559,7 @@
 				</div>
 
 				<div class="flex self-center translate-y-[0.5px]">
-					<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Search')}</div>
+					<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Pesquisar')}</div>
 				</div>
 			</button>
 		</div>
@@ -600,7 +600,7 @@
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Notes')}</div>
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Notas')}</div>
 					</div>
 				</a>
 			</div>
@@ -639,7 +639,7 @@
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Espaço de trabalho')}</div>
 					</div>
 				</a>
 			</div>

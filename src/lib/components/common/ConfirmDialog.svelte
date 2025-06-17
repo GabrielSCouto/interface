@@ -14,8 +14,8 @@
 	export let title = '';
 	export let message = '';
 
-	export let cancelLabel = $i18n.t('Cancel');
-	export let confirmLabel = $i18n.t('Confirm');
+	export let cancelLabel = $i18n.t('Cancelar');
+	export let confirmLabel = $i18n.t('Confirmar');
 
 	export let onConfirm = () => {};
 
@@ -104,7 +104,7 @@
 					{#if title !== ''}
 						{title}
 					{:else}
-						{$i18n.t('Confirm your action')}
+						{$i18n.t('Confirmar sua ação')}
 					{/if}
 				</div>
 

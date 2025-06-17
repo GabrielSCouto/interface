@@ -2,11 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/static/favicon.png" />
-		<link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
-		<link rel="shortcut icon" href="/static/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" href="/upe.png" />
+
 		<meta name="apple-mobile-web-app-title" content="Open WebUI" />
 
 		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
@@ -16,13 +13,18 @@
 		/>
 		<meta name="theme-color" content="#171717" />
 		<meta name="robots" content="noindex,nofollow" />
-		<meta name="description" content="Open WebUI" />
-		<link
-			rel="search"
-			type="application/opensearchdescription+xml"
-			title="Open WebUI"
-			href="/opensearch.xml"
-		/>
+		<meta name="apple-mobile-web-app-title" content="Assistente médico" />
+        <meta name="description" content="Assistente médico" />
+        <link
+            rel="search"
+            type="application/opensearchdescription+xml"
+            title="Assistente médico"
+            href="/opensearch.xml"
+        />
+
+		<title>Assistente médico</title>
+        %sveltekit.head%
+
 		<script src="/static/loader.js" defer></script>
 
 		<script>
@@ -81,7 +83,7 @@
 					const logo = document.getElementById('logo');
 					const isDarkMode = document.documentElement.classList.contains('dark');
 
-					if (isDarkMode) {
+					if (!isDarkMode) {
 						const darkImage = new Image();
 						darkImage.src = '/static/splash-dark.png';
 
@@ -101,9 +103,6 @@
 			})();
 		</script>
 
-		<title>Open WebUI</title>
-
-		%sveltekit.head%
 	</head>
 
 	<body data-sveltekit-preload-data="hover">
@@ -129,7 +128,7 @@
 					left: 50%;
 					transform: translateX(-50%);
 				"
-				src="/static/splash.png"
+				src="/upe.png"
 			/>
 
 			<div
@@ -149,9 +148,11 @@
 				<img
 					id="logo-her"
 					style="width: auto; height: 13rem"
-					src="/static/splash.png"
+					src="/upe.png"
 					class="animate-pulse-fast"
 				/>
+
+				
 
 				<div style="position: relative; width: 24rem; margin-top: 0.5rem">
 					<div
@@ -184,6 +185,9 @@
 				Footer content
 			</span> -->
 		</div>
+
+		
+
 	</body>
 </html>
 

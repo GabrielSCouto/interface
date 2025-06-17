@@ -78,7 +78,7 @@
 						/>
 					</svg>
 				</div>
-				<div class=" self-center truncate">{$i18n.t('Settings')}</div>
+				<div class=" self-center truncate">{'Configurações'}</div>
 			</button>
 
 			<button
@@ -95,7 +95,7 @@
 				<div class=" self-center mr-3">
 					<ArchiveBox className="size-5" strokeWidth="1.5" />
 				</div>
-				<div class=" self-center truncate">{$i18n.t('Archived Chats')}</div>
+				<div class=" self-center truncate">{'Conversas arquivadas'}</div>
 			</button>
 
 			{#if role === 'admin'}
@@ -156,7 +156,7 @@
 							/>
 						</svg>
 					</div>
-					<div class=" self-center truncate">{$i18n.t('Admin Panel')}</div>
+					<div class=" self-center truncate">{'Painel do administrador'}</div>
 				</a>
 			{/if}
 
@@ -172,19 +172,7 @@
 					}}
 				>
 					<QuestionMarkCircle className="size-5" />
-					<div class="flex items-center">{$i18n.t('Documentation')}</div>
-				</DropdownMenu.Item>
-
-				<!-- Releases -->
-				<DropdownMenu.Item
-					class="flex gap-2 items-center py-1.5 px-3 text-sm cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
-					id="menu-item-releases"
-					on:click={() => {
-						window.open('https://github.com/open-webui/open-webui/releases', '_blank');
-					}}
-				>
-					<Map className="size-5" />
-					<div class="flex items-center">{$i18n.t('Releases')}</div>
+					<div class="flex items-center">{'Documentação'}</div>
 				</DropdownMenu.Item>
 
 				<DropdownMenu.Item
@@ -196,7 +184,7 @@
 					}}
 				>
 					<Keyboard className="size-5" />
-					<div class="flex items-center">{$i18n.t('Keyboard shortcuts')}</div>
+					<div class="flex items-center">{'Atalhos do teclado'}</div>
 				</DropdownMenu.Item>
 			{/if}
 
@@ -232,7 +220,7 @@
 						/>
 					</svg>
 				</div>
-				<div class=" self-center truncate">{$i18n.t('Sign Out')}</div>
+				<div class=" self-center truncate">{'Sair'}</div>
 			</button>
 
 			{#if $activeUserIds?.length > 0}
@@ -255,7 +243,7 @@
 
 						<div class=" ">
 							<span class="">
-								{$i18n.t('Active Users')}:
+								{'Usuários ativos atualmente: '}:
 							</span>
 							<span class=" font-semibold">
 								{$activeUserIds?.length}

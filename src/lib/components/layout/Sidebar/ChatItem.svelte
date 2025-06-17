@@ -269,13 +269,13 @@
 
 <DeleteConfirmDialog
 	bind:show={showDeleteConfirm}
-	title={$i18n.t('Delete chat?')}
+	title={'Excluir chat?'}
 	on:confirm={() => {
 		deleteChatHandler(id);
 	}}
 >
 	<div class=" text-sm text-gray-500 flex-1 line-clamp-3">
-		{$i18n.t('This will delete')} <span class="  font-semibold">{title}</span>.
+		{$i18n.t('Este chat será excluído')} <span class="  font-semibold">{title}</span>.
 	</div>
 </DeleteConfirmDialog>
 
