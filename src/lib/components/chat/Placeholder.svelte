@@ -208,32 +208,34 @@
     <div class="mx-auto max-w-2xl font-primary mt-2" in:fade={{ duration: 200, delay: 200 }}>
         <div class="mx-5">
             <Suggestions
-                suggestionPrompts={[
-                     {
-                        "title": ["Dicas de nutrição", "para uma alimentação saudável"],
-                        "content": "Me dê 5 dicas práticas para melhorar minha alimentação no dia a dia, focando em alimentos acessíveis e nutritivos."
-                    },
-                    {
-                        "title": ["Exercícios simples", "para fazer em casa"],
-                        "content": "Sugira uma rotina de exercícios de 15 minutos que posso fazer em casa, sem equipamentos especiais, ideal para iniciantes."
-                    },
-                    {
-                        "title": ["Sono de qualidade", "melhorando o descanso"],
-                        "content": "Quais são as melhores práticas para ter uma boa noite de sono? Me dê dicas específicas sobre horários, ambiente e rotina noturna."
-                    },
-                    {
-                        "title": ["Gerenciando o estresse", "técnicas de relaxamento"],
-                        "content": "Preciso de técnicas práticas para gerenciar o estresse do dia a dia. Pode me ensinar alguns exercícios de respiração e relaxamento?"
-                    },
-                    {
-                        "title": ["Saúde preventiva", "hábitos para uma vida mais saudável"],
-                        "content": "Quais são os exames preventivos mais importantes que devo fazer regularmente? Por favor, inclua recomendações específicas por idade e gênero."
-                    },
-                    {
-                        "title": ["Saúde mental", "cuidados e atenção diária"],
-                        "content": "Como posso cuidar melhor da minha saúde mental no dia a dia? Gostaria de dicas práticas e sinais importantes para ficar atento."
-                    }
-                ]}
+                suggestionPrompts={
+                    [
+                        {
+                            "title": ["Saúde do Coração", "Cardiologia"],
+                            "content": "Quais são os principais fatores de risco para doenças cardíacas e como posso preveni-los? Existem exames preventivos recomendados a partir de alguma idade específica?"
+                        },
+                        {
+                            "title": ["Ouvido, Nariz e Garganta", "Otorrinolaringologia"],
+                            "content": "Quando devo procurar um otorrinolaringologista? Quais são os sintomas mais comuns de problemas nessas áreas e como posso cuidar da higiene diária para evitar infecções?"
+                        },
+                        {
+                            "title": ["Cuidados com a Pele", "Dermatologia"],
+                            "content": "Quais são os cuidados essenciais com a pele para prevenir doenças e o envelhecimento precoce, especialmente considerando o clima de Recife? Como identificar sinais de alerta de câncer de pele?"
+                        },
+                        {
+                            "title": ["Ossos e Articulações", "Ortopedia"],
+                            "content": "Quais são as melhores práticas para manter a saúde dos ossos e articulações, principalmente para quem pratica atividades físicas? Quando é necessário procurar um ortopedista para dores?"
+                        },
+                        {
+                            "title": ["Saúde Ocular", "Oftalmologia"],
+                            "content": "Quais são os principais sinais de alerta para problemas de visão e com que frequência devo fazer exames de vista? Como posso proteger meus olhos da exposição excessiva a telas?"
+                        },
+                        {
+                            "title": ["Saúde Feminina e Masculina", "Ginecologia e Urologia"],
+                            "content": "Quais são os exames preventivos de rotina mais importantes para a saúde feminina e masculina, e qual a periodicidade recomendada? Quais sinais de alerta exigem atenção médica imediata?"
+                        }
+                    ]
+                }
                 inputValue={prompt}
                 on:select={(e) => {
                     selectSuggestionPrompt(e.detail);
