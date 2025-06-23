@@ -137,7 +137,7 @@
 				}
 			}
 		} else {
-			console.log('Downloading PDF');
+			console.log('Baixando PDF');
 
 			const chatText = await getChatAsText();
 
@@ -297,20 +297,7 @@
 				}}
 			>
 				<Map className=" size-4" strokeWidth="1.5" />
-				<div class="flex items-center">{$i18n.t('Overview')}</div>
-			</DropdownMenu.Item>
-
-			<DropdownMenu.Item
-				class="flex gap-2 items-center px-3 py-2 text-sm  cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"
-				id="chat-overview-button"
-				on:click={async () => {
-					await showControls.set(true);
-					await showArtifacts.set(true);
-					await showOverview.set(false);
-				}}
-			>
-				<Cube className=" size-4" strokeWidth="1.5" />
-				<div class="flex items-center">{$i18n.t('Artifacts')}</div>
+				<div class="flex items-center">{$i18n.t('Visão geral')}</div>
 			</DropdownMenu.Item>
 
 			<DropdownMenu.Sub>
@@ -332,7 +319,7 @@
 						/>
 					</svg>
 
-					<div class="flex items-center">{$i18n.t('Download')}</div>
+					<div class="flex items-center">{$i18n.t('Baixar')}</div>
 				</DropdownMenu.SubTrigger>
 				<DropdownMenu.SubContent
 					class="w-full rounded-xl px-1 py-1.5 z-50 bg-white dark:bg-gray-850 dark:text-white shadow-lg"
@@ -346,7 +333,7 @@
 								downloadJSONExport();
 							}}
 						>
-							<div class="flex items-center line-clamp-1">{$i18n.t('Export chat (.json)')}</div>
+							<div class="flex items-center line-clamp-1">{$i18n.t('Exportar chat (.json)')}</div>
 						</DropdownMenu.Item>
 					{/if}
 					<DropdownMenu.Item
@@ -355,7 +342,7 @@
 							downloadTxt();
 						}}
 					>
-						<div class="flex items-center line-clamp-1">{$i18n.t('Plain text (.txt)')}</div>
+						<div class="flex items-center line-clamp-1">{$i18n.t('Texto simples (.txt)')}</div>
 					</DropdownMenu.Item>
 
 					<DropdownMenu.Item
@@ -364,7 +351,7 @@
 							downloadPdf();
 						}}
 					>
-						<div class="flex items-center line-clamp-1">{$i18n.t('PDF document (.pdf)')}</div>
+						<div class="flex items-center line-clamp-1">{$i18n.t('Documento pdf (.pdf)')}</div>
 					</DropdownMenu.Item>
 				</DropdownMenu.SubContent>
 			</DropdownMenu.Sub>
@@ -378,12 +365,12 @@
 					});
 
 					if (res) {
-						toast.success($i18n.t('Copied to clipboard'));
+						toast.success($i18n.t('Copiado no clipboard'));
 					}
 				}}
 			>
 				<Clipboard className=" size-4" strokeWidth="1.5" />
-				<div class="flex items-center">{$i18n.t('Copy')}</div>
+				<div class="flex items-center">{$i18n.t('Copiar')}</div>
 			</DropdownMenu.Item>
 
 			{#if !$temporaryChatEnabled}
