@@ -541,75 +541,77 @@ export const updateTaskConfig = async (token: string, config: object) => {
 };
 
 export const generateTitle = async (
-	token: string = '',
-	model: string,
-	messages: object[],
-	chat_id?: string
+    token: string = '',
+    model: string,
+    messages: object[], // Este é o array que você vai modificar
+    chat_id?: string
 ) => {
-	let error = null;
+    let error = null;
 
-	const res = await fetch(`${WEBUI_BASE_URL}/api/v1/tasks/title/completions`, {
-		method: 'POST',
-		headers: {
-			Accept: 'application/json',
-			'Content-Type': 'application/json',
-			Authorization: `Bearer ${token}`
-		},
-		body: JSON.stringify({
-			model: model,
-			messages: messages,
-			...(chat_id && { chat_id: chat_id })
-		})
-	})
-		.then(async (res) => {
-			if (!res.ok) throw await res.json();
-			return res.json();
-		})
-		.catch((err) => {
-			console.error(err);
-			if ('detail' in err) {
-				error = err.detail;
-			}
-			return null;
-		});
+    // Adicione uma instrução para o modelo responder em português
+    // Você pode fazer isso no início das mensagens ou como uma mensagem de sistema
+    const messagesWithLanguageInstruction = [
+        // Exemplo 1: Mensagem de sistema no início
+        { role: "system", content: "Você é um assistente que gera títulos para conversas. Responda apenas em português." },
+        // Exemplo 2: Adicionar ao final do array existente (ou antes da última mensagem)
+        ...messages,
+        { role: "user", content: "Gere um título para esta conversa. O título deve ser em português e ter no máximo 5 palavras." }
+        // A instrução precisa estar clara para o modelo.
+        // O ideal é que seja parte da sua prompt de engenharia para o modelo.
+    ];
 
-	if (error) {
-		throw error;
-	}
+    const res = await fetch(`${WEBUI_BASE_URL}/api/v1/tasks/title/completions`, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({
+            model: model,
+            // Use o array de mensagens com a instrução de idioma
+            messages: messagesWithLanguageInstruction,
+            ...(chat_id && { chat_id: chat_id })
+        })
+    })
+        .then(async (res) => {
+            if (!res.ok) throw await res.json();
+            return res.json();
+        })
+        .catch((err) => {
+            console.error(err);
+            if ('detail' in err) {
+                error = err.detail;
+            }
+            return null;
+        });
 
-	try {
-		// Step 1: Safely extract the response string
-		const response = res?.choices[0]?.message?.content ?? '';
+    if (error) {
+        throw error;
+    }
 
-		// Step 2: Attempt to fix common JSON format issues like single quotes
-		const sanitizedResponse = response.replace(/['‘’`]/g, '"'); // Convert single quotes to double quotes for valid JSON
+    try {
+        // ... (o restante do seu código para parsear a resposta permanece o mesmo) ...
+        const response = res?.choices[0]?.message?.content ?? '';
+        const sanitizedResponse = response.replace(/['‘’`]/g, '"');
+        const jsonStartIndex = sanitizedResponse.indexOf('{');
+        const jsonEndIndex = sanitizedResponse.lastIndexOf('}');
 
-		// Step 3: Find the relevant JSON block within the response
-		const jsonStartIndex = sanitizedResponse.indexOf('{');
-		const jsonEndIndex = sanitizedResponse.lastIndexOf('}');
+        if (jsonStartIndex !== -1 && jsonEndIndex !== -1) {
+            const jsonResponse = sanitizedResponse.substring(jsonStartIndex, jsonEndIndex + 1);
+            const parsed = JSON.parse(jsonResponse);
 
-		// Step 4: Check if we found a valid JSON block (with both `{` and `}`)
-		if (jsonStartIndex !== -1 && jsonEndIndex !== -1) {
-			const jsonResponse = sanitizedResponse.substring(jsonStartIndex, jsonEndIndex + 1);
-
-			// Step 5: Parse the JSON block
-			const parsed = JSON.parse(jsonResponse);
-
-			// Step 6: If there's a "tags" key, return the tags array; otherwise, return an empty array
-			if (parsed && parsed.title) {
-				return parsed.title;
-			} else {
-				return null;
-			}
-		}
-
-		// If no valid JSON block found, return an empty array
-		return null;
-	} catch (e) {
-		// Catch and safely return empty array on any parsing errors
-		console.error('Failed to parse response: ', e);
-		return null;
-	}
+            if (parsed && parsed.title) {
+                return parsed.title;
+            } else {
+                return null;
+            }
+        }
+        return null;
+    } catch (e) {
+        console.error('Failed to parse response: ', e);
+        return null;
+    }
 };
 
 export const generateFollowUps = async (
