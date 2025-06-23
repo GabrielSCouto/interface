@@ -52,7 +52,7 @@
 				<div class="mr-1 max-w-full">
 					<Selector
 						id={`${selectedModelIdx}`}
-						placeholder={$i18n.t('Select a model')}
+						placeholder={$i18n.t('Selecionar um modelo')}
 						items={$models.map((model) => ({
 							value: model.id,
 							label: model.name,
@@ -73,7 +73,7 @@
 					<div
 						class="  self-center mx-1 disabled:text-gray-600 disabled:hover:text-gray-600 -translate-y-[0.5px]"
 					>
-						<Tooltip content={$i18n.t('Add Model')}>
+						<Tooltip content={$i18n.t('Adicionar modelo')}>
 							<button
 								class=" "
 								{disabled}
@@ -99,7 +99,7 @@
 					<div
 						class="  self-center mx-1 disabled:text-gray-600 disabled:hover:text-gray-600 -translate-y-[0.5px]"
 					>
-						<Tooltip content={$i18n.t('Remove Model')}>
+						<Tooltip content={$i18n.t('Remover modelo')}>
 							<button
 								{disabled}
 								on:click={() => {
@@ -131,6 +131,6 @@
 	<div
 		class="absolute text-left mt-[1px] ml-1 text-[0.7rem] text-gray-600 dark:text-gray-400 font-primary"
 	>
-		<button on:click={saveDefaultModel}> {$i18n.t('Set as default')}</button>
+		<button on:click={saveDefaultModel}> {$i18n.t('Modelo padrão')}</button>
 	</div>
 {/if}
