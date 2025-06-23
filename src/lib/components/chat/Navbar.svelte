@@ -121,21 +121,21 @@
 						</Menu>
 					{/if}
 
-					<Tooltip content={$i18n.t('Controls')}>
-						<button
-							class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
-							on:click={async () => {
-								await showControls.set(!$showControls);
-							}}
-							aria-label="Controls"
+					<Tooltip content={$i18n.t('Informações')}>
+						<a
+							href="https://www.upe.br/uh-cisam/nutes/"
+							class="flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+							aria-label="Informações"
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-							<div class=" m-auto self-center">
-								<AdjustmentsHorizontal className=" size-5" strokeWidth="0.5" />
+							<div class="m-auto self-center">
+								Nutes-Cisam
 							</div>
-						</button>
+						</a>
 					</Tooltip>
 
-					<Tooltip content={$i18n.t('New Chat')}>
+					<Tooltip content={$i18n.t('Novo Chat')}>
 						<button
 							id="new-chat-button"
 							class=" flex {$showSidebar
