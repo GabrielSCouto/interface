@@ -384,7 +384,7 @@
 
 		<div class="  flex w-full justify-between my-2 pr-2">
 			<div class=" self-center text-xs font-medium">
-				{$i18n.t('Notes')}
+				{$i18n.t('Notas')}
 			</div>
 
 			<Switch bind:state={permissions.features.notes} />
