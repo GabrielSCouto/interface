@@ -62,7 +62,7 @@
 
 	const createNoteHandler = async () => {
 		const res = await createNewNote(localStorage.token, {
-			title: $i18n.t('New Note'),
+			title: $i18n.t('Nova nota'),
 			data: {
 				content: {
 					json: null,
@@ -343,7 +343,7 @@
 													{#if note.data?.content?.md}
 														{note.data?.content?.md}
 													{:else}
-														{$i18n.t('No content')}
+														{$i18n.t('Sem conteúdo')}
 													{/if}
 												</div>
 											</div>
@@ -377,11 +377,11 @@
 				<div class="w-full h-full flex flex-col items-center justify-center">
 					<div class="pb-20 text-center">
 						<div class=" text-xl font-medium text-gray-400 dark:text-gray-600">
-							{$i18n.t('No Notes')}
+							{$i18n.t('Sem notas')}
 						</div>
 
 						<div class="mt-1 text-sm text-gray-300 dark:text-gray-700">
-							{$i18n.t('Create your first note by clicking on the plus button below.')}
+							{$i18n.t('Crie sua primeira nota no botão de "mais" abaixo.')}
 						</div>
 					</div>
 				</div>
@@ -390,7 +390,8 @@
 
 		<div class="absolute bottom-0 left-0 right-0 p-5 max-w-full flex justify-end">
 			<div class="flex gap-0.5 justify-end w-full">
-				<Tooltip content={$i18n.t('Create Note')}>
+
+				<Tooltip content={$i18n.t('Criar nota')}>
 					<button
 						class="cursor-pointer p-2.5 flex rounded-full border border-gray-50 bg-white dark:border-none dark:bg-gray-850 hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-xl"
 						type="button"
@@ -401,65 +402,9 @@
 						<Plus className="size-4.5" strokeWidth="2.5" />
 					</button>
 				</Tooltip>
-
-				<!-- <button
-				class="cursor-pointer p-2.5 flex rounded-full hover:bg-gray-100 dark:hover:bg-gray-850 transition shadow-xl"
-			>
-				<SparklesSolid className="size-4" />
-			</button> -->
 			</div>
 		</div>
-
-		<!-- {#if $user?.role === 'admin'}
-		<div class=" flex justify-end w-full mb-3">
-			<div class="flex space-x-2">
-				<input
-					id="notes-import-input"
-					bind:files={importFiles}
-					type="file"
-					accept=".md"
-					hidden
-					on:change={() => {
-						console.log(importFiles);
-
-						const reader = new FileReader();
-						reader.onload = async (event) => {
-							console.log(event.target.result);
-						};
-
-						reader.readAsText(importFiles[0]);
-					}}
-				/>
-
-				<button
-					class="flex text-xs items-center space-x-1 px-3 py-1.5 rounded-xl bg-gray-50 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-200 transition"
-					on:click={() => {
-						const notesImportInputElement = document.getElementById('notes-import-input');
-						if (notesImportInputElement) {
-							notesImportInputElement.click();
-						}
-					}}
-				>
-					<div class=" self-center mr-2 font-medium line-clamp-1">{$i18n.t('Import Notes')}</div>
-
-					<div class=" self-center">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 16 16"
-							fill="currentColor"
-							class="w-4 h-4"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm4 9.5a.75.75 0 0 1-.75-.75V8.06l-.72.72a.75.75 0 0 1-1.06-1.06l2-2a.75.75 0 0 1 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72v2.69a.75.75 0 0 1-.75.75Z"
-								clip-rule="evenodd"
-							/>
-						</svg>
-					</div>
-				</button>
-			</div>
-		</div>
-	{/if} -->
+		
 	{:else}
 		<div class="w-full h-full flex justify-center items-center">
 			<Spinner />
