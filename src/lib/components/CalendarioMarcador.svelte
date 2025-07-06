@@ -140,6 +140,6 @@
     .grid-dias { margin-top: 0.5rem; gap: 4px; }
     .dia { display: flex; justify-content: center; align-items: center; width: 100%; aspect-ratio: 1 / 1; border-radius: 50%; border: none; background-color: transparent; cursor: pointer; transition: background-color 0.2s; }
     .dia:hover { background-color: #f0f0f0; }
-    .dia.marcado { background-color: #ffc107; color: #333; font-weight: bold; }
+    .dia.marcado { background-color: #ff7c7c; color: #333; font-weight: bold; }
     .dia-vazio {}
 </style>
