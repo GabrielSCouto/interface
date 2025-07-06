@@ -1,43 +1,49 @@
 <script lang="ts">
-    import { createEventDispatcher, onMount } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 
-    export let show = false;
-    export let date: Date | null = null;
-    export let initialValue = '';
+	export let show = false;
+	export let date: Date | null = null;
+	export let initialValue = '';
 
-    let inputValue = '';
-    let textareaElement: HTMLTextAreaElement;
+	let inputValue = '';
+	let textareaElement: HTMLTextAreaElement;
 
-    const dispatch = createEventDispatcher();
+	const dispatch = createEventDispatcher();
 
-    // onMount será executado cada vez que o #key no pai for alterado.
-    onMount(() => {
-        inputValue = initialValue;
-        setTimeout(() => textareaElement?.focus(), 50);
-    });
+	onMount(() => {
+		// Esta parte define o valor quando o diálogo é criado pela primeira vez
+		inputValue = initialValue;
+		setTimeout(() => textareaElement?.focus(), 50);
+	});
 
-    function handleSubmit() {
-        dispatch('submit', inputValue);
-    }
+	// ADIÇÃO: Este bloco reativo garante que o valor seja atualizado
+	// se a propriedade 'initialValue' mudar após o diálogo já estar visível.
+	// Isso corrige o problema do reload.
+	$: if (initialValue !== undefined) {
+		inputValue = initialValue;
+	}
 
-    function handleCancel() {
-        dispatch('close');
-    }
+	function handleSubmit() {
+		dispatch('submit', inputValue);
+	}
 
-    function handleDelete() {
-        // Define o valor como vazio e submete, o que apaga a anotação.
-        inputValue = '';
-        dispatch('submit', inputValue);
-    }
+	function handleCancel() {
+		dispatch('close');
+	}
 
-    function handleKeydown(event: KeyboardEvent) {
-        if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
-            handleSubmit();
-        }
-        if (event.key === 'Escape') {
-            handleCancel();
-        }
-    }
+	function handleDelete() {
+		inputValue = '';
+		dispatch('submit', inputValue);
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+			handleSubmit();
+		}
+		if (event.key === 'Escape') {
+			handleCancel();
+		}
+	}
 </script>
 
 {#if show && date}
@@ -59,9 +65,7 @@
 
             <footer class="dialog-footer">
                 <button on:click={handleCancel} class="button-secondary">Cancelar</button>
-                
                 <button on:click={handleDelete} class="button-danger">Excluir</button>
-                
                 <button on:click={handleSubmit} class="button-primary">Salvar</button>
             </footer>
         </div>
@@ -69,6 +73,7 @@
 {/if}
 
 <style>
+    /* Seu CSS permanece o mesmo */
     .dialog-overlay {
         position: fixed;
         top: 0;
@@ -84,7 +89,7 @@
         backdrop-filter: blur(4px);
     }
     .dialog-box {
-        background-color: #1f2937; /* Fundo: cinza-azulado escuro */
+        background-color: #1f2937;
         color: #d1d5db;
         padding: 20px 24px;
         border-radius: 12px;
@@ -117,7 +122,7 @@
         margin: 0;
         font-size: 1.125rem;
         font-weight: 600;
-        color: #f9fafb; /* Título branco */
+        color: #f9fafb; 
     }
     .close-button {
         background: none;
@@ -183,12 +188,12 @@
     .button-secondary:hover {
         background-color: #6b7280;
     }
-    /* Estilo para o novo botão Excluir */
+   
     .button-danger {
-        background-color: #dc2626; /* Vermelho */
+        background-color: #dc2626; 
         color: white;
     }
     .button-danger:hover {
-        background-color: #ef4444; /* Vermelho mais claro no hover */
+        background-color: #ef4444; 
     }
 </style>
