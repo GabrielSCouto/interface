@@ -1632,7 +1632,8 @@
 						})
 			}))
 			.filter((message) => message?.role === 'user' || message?.content?.trim());
-
+			console.log('PAYLOAD FINAL PARA A API:', JSON.stringify(messages, null, 2));
+			
 		const res = await generateOpenAIChatCompletion(
 			localStorage.token,
 			{
