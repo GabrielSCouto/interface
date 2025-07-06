@@ -512,8 +512,8 @@
 					<div class="self-center mx-1.5">
 						<img
 							crossorigin="anonymous"
-							src="{WEBUI_BASE_URL}/favicon.png"
-							class=" size-5 -translate-x-1.5 rounded-full"
+							src="/iconDoModelo.png"
+							class=" size-6 -translate-x-1.5 rounded-full"
 							alt="logo"
 						/>
 					</div>
