@@ -64,9 +64,9 @@
 
 			<div class="flex items-center">
 				{#if ($settings?.pinnedModels ?? []).includes(model?.id)}
-					{$i18n.t('Hide from Sidebar')}
+					{$i18n.t('Esconder icone do na barra lateral')}
 				{:else}
-					{$i18n.t('Keep in Sidebar')}
+					{$i18n.t('Colocar icone na barra lateral')}
 				{/if}
 			</div>
 		</button>

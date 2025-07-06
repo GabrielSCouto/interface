@@ -578,7 +578,7 @@
 		if (backendConfig) {
 			// Save Backend Status to Store
 			await config.set(backendConfig);
-			await WEBUI_NAME.set("Assistente médico");
+			await WEBUI_NAME.set("Assistente Médico");
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
@@ -651,9 +651,9 @@
 </script>
 
 <svelte:head>
-    <title>Assistente médico</title>
-    <meta name="apple-mobile-web-app-title" content="Assistente médico" />
-    <meta name="application-name" content="Assistente médico" />
+    <title>Assistente Médico</title>
+    <meta name="apple-mobile-web-app-title" content="Assistente Médico" />
+    <meta name="application-name" content="Assistente Médico" />
     <link crossorigin="anonymous" rel="icon" href="{WEBUI_BASE_URL}/static/favicon.png" />
 </svelte:head>
 
