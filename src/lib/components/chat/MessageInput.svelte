@@ -3,7 +3,7 @@
 	import { marked } from 'marked';
 
 	import { toast } from 'svelte-sonner';
-
+	import { generateBetterMessages } from '$lib/apis';
 	import { v4 as uuidv4 } from 'uuid';
 	import { createPicker, getAuthToken } from '$lib/utils/google-drive-picker';
 	import { pickAndDownloadFile } from '$lib/utils/onedrive-file-picker';
@@ -1338,9 +1338,98 @@
 										{/if}
 									</div>
 
+{#if atSelectedModel !== undefined}
+    <div>
+        Talking to <span class="font-medium">{atSelectedModel.name}</span>
+    </div>
+{/if}
+
 									<div class="self-end flex space-x-1 mr-1 shrink-0">
 										{#if (!history?.currentId || history.messages[history.currentId]?.done == true) && ($_user?.role === 'admin' || ($_user?.permissions?.chat?.stt ?? true))}
 											<!-- {$i18n.t('Record voice')} -->
+											<Tooltip content={$i18n.t('Melhorar texto')}>
+												<button													
+													class=" text-gray-600 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200 p-1.5 mr-0.5 self-center"
+													type="button"
+													on:click={async () => {
+													
+																// Verifica se há um modelo selecionado
+																if (!atSelectedModel) {
+																	if ($models.length > 0) {
+																		atSelectedModel = $models[0];
+																	} else {
+																		toast.error('Nenhum modelo disponível');
+																		return;
+																	}
+																}
+
+																// Verifica se o modelo tem um ID válido
+																if (!atSelectedModel?.id) {
+																	toast.error('Modelo inválido');
+																	return;
+																}
+
+																// Log para debug
+																console.log("Modelo selecionado:", atSelectedModel);
+
+																const messages = [
+																	{
+																		role: 'system',
+																		content: 'generate a better text based on the user input'
+																	},
+																	{
+																		role: 'user',
+																		content: prompt
+																	}
+																];
+
+																const body = {
+																	id: uuidv4(),
+																	model: atSelectedModel.id,	
+																	messages,
+																	chat_id: uuidv4(),
+																	session_id: uuidv4(),													
+																	
+																};
+
+																console.log("Enviando requisição:", body);
+
+																const resposta = await (localStorage.token, body);
+
+																// 1. ADICIONE ESTA LINHA PARA VER O OBJETO COMPLETO
+																console.log("Estrutura completa da resposta recebida:", resposta);
+
+																const mensagemDaIA = resposta?.choices?.[0]?.message?.content;
+																	
+																if (mensagemDaIA) {
+																	console.log("Resposta da IA:", mensagemDaIA);
+																	prompt = mensagemDaIA; 
+																} else {
+																	// 2. ADICIONE ESTE BLOCO PARA CONFIRMAR O PROBLEMA
+																	console.error("Não foi possível encontrar 'content' na resposta. Verifique a estrutura do objeto acima.");
+																}
+															
+
+													}}
+													aria-label="Voice Input"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														viewBox="0 0 24 24"
+														fill="none"
+														stroke="currentColor"
+														class="w-5 h-5 translate-y-[0.5px]"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
+														/>
+													</svg>
+												</button>
+											</Tooltip>
+
+
 											<Tooltip content={$i18n.t('Áudio')}>
 												<button
 													id="voice-input-button"
@@ -1387,6 +1476,8 @@
 													</svg>
 												</button>
 											</Tooltip>
+
+
 										{/if}
 
 										{#if (taskIds && taskIds.length > 0) || (history.currentId && history.messages[history.currentId]?.done != true)}
