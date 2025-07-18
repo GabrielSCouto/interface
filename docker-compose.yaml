@@ -1,13 +1,18 @@
 services:
   ollama:
+    build:
+      context: .
+      dockerfile: Dockerfile.ollama
     volumes:
       - ollama:/root/.ollama
+      - ./modelfiles:/modelfiles
     container_name: ollama
-    pull_policy: always
     tty: true
     restart: unless-stopped
     ports:
       - "11434:11434"
+    entrypoint: ["/entrypoint.sh"]
+    pull_policy: always
     image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
   open-webui:

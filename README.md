@@ -19,7 +19,7 @@ A plataforma foi adaptada para servir como um ambiente seguro e intuitivo para i
 ## 🛠️ Tecnologias Utilizadas
 
 * **Frontend:** SvelteKit
-* **Backend:** Python (através do Open WebUI)
+* **Backend:** Python e Ollama (através do Open WebUI)
 * **Containerização:** Docker e Docker Compose
 
 ## 🚀 Como Executar o Projeto Localmente
@@ -42,14 +42,49 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
 2.  **Configuração do Ambiente:**
     Este projeto utiliza o `docker-compose.yaml` para orquestrar os serviços. Certifique-se de que o Docker esteja em execução na sua máquina.
 
-3.  **Inicie os containers:**
+3.  **(Opcional) Baixar o modelo Medgemma `medgemma-4b-it-Q8_0.gguf` do Hugging Face:**
+
+    ```bash
+    cd modelfiles/medgemma-4b-it-Q8_0
+    wget https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf
+    ```
+
+    <details>
+    <summary>Como adicionar outros modelos:</summary>
+
+    1. Criar pasta para o modelo novo dentro da pasta **modelfiles**: `/modelfiles/nome_do_modelo_novo` (substituir nome_do_modelo_novo pelo nome desejado)
+
+    2. Dentro da pasta nova, criar um arquivo `Modelfile` contendo as instruções para a execução do modelo pelo Ollama &mdash; checar [documentação](https://ollama.readthedocs.io/en/modelfile/) do Ollama, ou Modelfile já existente em `/modelfiles/medgemma-4b-it-Q8_0`
+
+    3. Na pasta raiz, alterar o arquivo `entrypoint.sh` para incluir o modelo desejado (antes de 'wait'):
+        ```bash
+        [...]
+
+        ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
+        
+        wait
+        ```
+
+    4. Rebuildar o ambiente e acessar a interface atualizada:
+        ```bash
+        docker-compose down
+        docker-compose up -d --build
+        ```
+
+        ```
+        http://localhost:8080
+        ```
+
+    </details>
+
+4.  **Inicie os containers:**
     Na pasta raiz do projeto, execute o comando:
     ```bash
     docker-compose up -d --build
     ```
     * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
 
-4.  **Acesse a interface:**
+5.  **Acesse a interface:**
     Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
     ```
     http://localhost:8080
