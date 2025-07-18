@@ -614,6 +614,51 @@ export const generateTitle = async (
     }
 };
 
+type generateBetterMessagesForm = {
+	id: any;
+    model: string;
+    messages: {
+        role: string;
+        content: string;
+    }[];
+    chat_id: any;
+    session_id: any;
+};
+
+export const generateBetterMessages = async (token: string, body: generateBetterMessagesForm) => {
+	let error = null;
+
+    // A constante 'res' vai armazenar o resultado do fetch
+    const res = await fetch(`${WEBUI_BASE_URL}/api/chat/completions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            ...(token && { authorization: `Bearer ${token}` })
+        },
+        body: JSON.stringify(body)
+    })
+    .then(async (response) => {
+        if (!response.ok) {
+            // Se a resposta não for OK, lança o erro para o .catch
+            throw await response.json();
+        }
+        // Se for OK, retorna o JSON da resposta
+        return response.json();
+    })
+    .catch((err) => {
+        console.error("Erro na chamada da API:", err);
+        error = err?.detail || 'Ocorreu um erro desconhecido.';
+        return null;
+    });
+
+    if (error) {
+        throw error;
+    }
+
+    // ✅ IMPORTANTE: Retorna 'res', que contém a resposta da API
+    return res;
+};
+
 export const generateFollowUps = async (
 	token: string = '',
 	model: string,
