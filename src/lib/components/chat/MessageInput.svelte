@@ -1338,12 +1338,6 @@
 										{/if}
 									</div>
 
-{#if atSelectedModel !== undefined}
-    <div>
-        Talking to <span class="font-medium">{atSelectedModel.name}</span>
-    </div>
-{/if}
-
 									<div class="self-end flex space-x-1 mr-1 shrink-0">
 										{#if (!history?.currentId || history.messages[history.currentId]?.done == true) && ($_user?.role === 'admin' || ($_user?.permissions?.chat?.stt ?? true))}
 											<!-- {$i18n.t('Record voice')} -->
@@ -1375,7 +1369,7 @@
 																const messages = [
 																	{
 																		role: 'system',
-																		content: 'generate a better text based on the user input'
+																		content: 'generate a better prompt in portuguese based on the user input, write only one prompts, do not write anything else, and be descriptive'
 																	},
 																	{
 																		role: 'user',
@@ -1394,18 +1388,29 @@
 
 																console.log("Enviando requisição:", body);
 
-																const resposta = await (localStorage.token, body);
+																const resposta = await generateBetterMessages(localStorage.token, body);
 
-																// 1. ADICIONE ESTA LINHA PARA VER O OBJETO COMPLETO
 																console.log("Estrutura completa da resposta recebida:", resposta);
 
 																const mensagemDaIA = resposta?.choices?.[0]?.message?.content;
 																	
 																if (mensagemDaIA) {
 																	console.log("Resposta da IA:", mensagemDaIA);
+																	let listaDeMensagens;
+																	let oqueRemover = ['\n', '\r', '\t', ];
+																	listaDeMensagens = mensagemDaIA.replace('/', '').trim(); 
+
+																		
+
+																	console.log("Lista de mensagens:", listaDeMensagens);
+
 																	prompt = mensagemDaIA; 
+
+																		
+
+
 																} else {
-																	// 2. ADICIONE ESTE BLOCO PARA CONFIRMAR O PROBLEMA
+																
 																	console.error("Não foi possível encontrar 'content' na resposta. Verifique a estrutura do objeto acima.");
 																}
 															
