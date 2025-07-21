@@ -1339,15 +1339,14 @@
 									</div>
 
 									<div class="self-end flex space-x-1 mr-1 shrink-0">
-										{#if (!history?.currentId || history.messages[history.currentId]?.done == true) && ($_user?.role === 'admin' || ($_user?.permissions?.chat?.stt ?? true))}
-											<!-- {$i18n.t('Record voice')} -->
+										{#if (!history?.currentId || history.messages[history.currentId]?.done == true) && ($_user?.role === 'admin' || ($_user?.permissions?.chat?.stt ?? true))}										
+
 											<Tooltip content={$i18n.t('Melhorar texto')}>
 												<button													
 													class=" text-gray-600 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200 p-1.5 mr-0.5 self-center"
 													type="button"
 													on:click={async () => {
 													
-																// Verifica se há um modelo selecionado
 																if (!atSelectedModel) {
 																	if ($models.length > 0) {
 																		atSelectedModel = $models[0];
@@ -1357,13 +1356,11 @@
 																	}
 																}
 
-																// Verifica se o modelo tem um ID válido
 																if (!atSelectedModel?.id) {
 																	toast.error('Modelo inválido');
 																	return;
 																}
 
-																// Log para debug
 																console.log("Modelo selecionado:", atSelectedModel);
 
 																const messages = [
@@ -1389,7 +1386,7 @@
 																console.log("Enviando requisição:", body);
 
 																const resposta = await generateBetterMessages(localStorage.token, body);
-
+																
 																console.log("Estrutura completa da resposta recebida:", resposta);
 
 																const mensagemDaIA = resposta?.choices?.[0]?.message?.content;
@@ -1399,8 +1396,6 @@
 																	let listaDeMensagens;
 																	let oqueRemover = ['\n', '\r', '\t', ];
 																	listaDeMensagens = mensagemDaIA.replace('/', '').trim(); 
-
-																		
 
 																	console.log("Lista de mensagens:", listaDeMensagens);
 
