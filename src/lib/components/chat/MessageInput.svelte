@@ -117,6 +117,8 @@
 	let dragged = false;
 	let shiftKey = false;
 
+	let hideTalkingToModel = false;
+
 	let user = null;
 	export let placeholder = '';
 
@@ -494,7 +496,7 @@
 				</div>
 
 				<div class="w-full relative">
-					{#if atSelectedModel !== undefined}
+					{#if atSelectedModel !== undefined && !hideTalkingToModel}
 						<div
 							class="px-3 pb-0.5 pt-1.5 text-left w-full flex flex-col absolute bottom-0 left-0 right-0 bg-linear-to-t from-white dark:from-gray-900 z-10"
 						>
@@ -1346,6 +1348,8 @@
 													class=" text-gray-600 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-200 p-1.5 mr-0.5 self-center"
 													type="button"
 													on:click={async () => {
+
+																hideTalkingToModel = false;
 													
 																if (!atSelectedModel) {
 																	if ($models.length > 0) {
@@ -1366,7 +1370,7 @@
 																const messages = [
 																	{
 																		role: 'system',
-																		content: 'generate a better prompt in portuguese based on the user input, write only one prompts, do not write anything else, and be descriptive'
+																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only one prompt and do not write anything else."
 																	},
 																	{
 																		role: 'user',
@@ -1393,17 +1397,8 @@
 																	
 																if (mensagemDaIA) {
 																	console.log("Resposta da IA:", mensagemDaIA);
-																	let listaDeMensagens;
-																	let oqueRemover = ['\n', '\r', '\t', ];
-																	listaDeMensagens = mensagemDaIA.replace('/', '').trim(); 
-
-																	console.log("Lista de mensagens:", listaDeMensagens);
-
-																	prompt = mensagemDaIA; 
-
-																		
-
-
+																	prompt = mensagemDaIA;
+																	hideTalkingToModel = true;
 																} else {
 																
 																	console.error("Não foi possível encontrar 'content' na resposta. Verifique a estrutura do objeto acima.");
