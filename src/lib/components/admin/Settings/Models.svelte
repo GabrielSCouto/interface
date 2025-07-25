@@ -35,6 +35,7 @@
 	import EyeSlash from '$lib/components/icons/EyeSlash.svelte';
 	import Eye from '$lib/components/icons/Eye.svelte';
 	import { copyToClipboard } from '$lib/utils';
+	import { parseAllDocuments } from 'yaml';
 
 	let shiftKey = false;
 
@@ -112,15 +113,20 @@
 				toast.success($i18n.t('Model updated successfully'));
 			}
 		} else {
-			const res = await createNewModel(localStorage.token, {
-				meta: {},
+			const payload = {
+				...model, // Copia o modelo original
 				id: model.id,
 				name: model.name,
 				base_model_id: null,
-				params: {},
+				meta: {},
 				access_control: {},
-				...model
-			}).catch((error) => {
+				params: {
+					...model.params, // Copia os parâmetros existentes do modelo
+					max_tokens: 100   // Adiciona ou sobrescreve o max_tokens
+				}
+			};
+
+			const res = await createNewModel(localStorage.token, payload).catch((error) => {
 				return null;
 			});
 
@@ -162,6 +168,8 @@
 				$config?.features?.enable_direct_connections && ($settings?.directConnections ?? null)
 			)
 		);
+
+
 	};
 
 	const hideModelHandler = async (model) => {
@@ -427,7 +435,7 @@
 									>
 										<Switch
 											bind:state={model.is_active}
-											on:change={async () => {
+											on:change={async () => {												
 												toggleModelHandler(model);
 											}}
 										/>
