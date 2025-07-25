@@ -361,7 +361,7 @@
       class:text-white={params.max_tokens === 200}
       on:click={() => {
         params.max_tokens = 200;
-        params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
+       // params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
       }}
     >
       {$i18n.t('Resumo')}
@@ -373,7 +373,7 @@
       class:text-white={params.max_tokens === 800}
       on:click={() => {
         params.max_tokens = 800;
-        params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
+        //params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
       }}
     >
       {$i18n.t('Explicativo')}
@@ -385,7 +385,7 @@
       class:text-white={params.max_tokens === 1600}
       on:click={() => {
         params.max_tokens = 1600;
-        params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
+        //params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
       }}
     >
       {$i18n.t('Aula')}
