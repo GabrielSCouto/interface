@@ -1406,7 +1406,7 @@
 															
 
 													}}
-													aria-label="Voice Input"
+													
 												>
 													<svg
 														xmlns="http://www.w3.org/2000/svg"
