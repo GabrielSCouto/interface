@@ -13,6 +13,7 @@
 	import Map from '$lib/components/icons/Map.svelte';
 	import Keyboard from '$lib/components/icons/Keyboard.svelte';
 	import ShortcutsModal from '$lib/components/chat/ShortcutsModal.svelte';
+	import { showControls } from '$lib/stores';
 
 	const i18n = getContext('i18n');
 
@@ -101,16 +102,30 @@
 			{#if role === 'admin'}
 				<a
 					class="flex rounded-md py-1.5 px-3 w-full hover:bg-gray-50 dark:hover:bg-gray-800 transition"
-					href="/playground"
 					on:click={() => {
 						show = false;
 
-						if ($mobile) {
-							showSidebar.set(false);
-						}
+						showControls.set(!$showControls);
 					}}
 				>
-					
+					<div class=" self-center mr-3">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-5 h-5"
+							>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M7.5 12h6.75M7.5 9h9M3 17.25V6.75A2.25 2.25 0 015.25 4.5h13.5A2.25 2.25 0 0121 6.75v7.5a2.25 2.25 0 01-2.25 2.25H7.5L3 21l.001-3.75z"
+							/>
+						</svg>
+
+					</div>
+					<div class=" self-center truncate">{'Controles do chat'}</div>
 				</a>
 
 				<a
