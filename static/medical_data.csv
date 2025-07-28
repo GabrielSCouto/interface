@@ -1,101 +1,101 @@
-PatientID,Age,HealthArea,Symptom,DiagnosedDisease,RecommendedTreatment,AgeRange
-Mulher 1,48,Histeroscopia Diagnóstica,Dor pélvica,Hiperplasia endometrial,Raspagem endometrial,45-54
-Mulher 2,31,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Hiperplasia endometrial,Uso de hormônios,25-34
-Mulher 3,50,Odontologia,Sangramento gengival,Cárie dentária,Extração dentária,45-54
-Mulher 4,42,Odontologia,Mau hálito,Gengivite,Obturação,35-44
-Mulher 5,36,Odontologia,Mau hálito,Gengivite,Extração dentária,35-44
-Mulher 6,19,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Cirurgia histeroscópica,18-24
-Mulher 7,27,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Raspagem endometrial,25-34
-Mulher 8,22,Planejamento Reprodutivo,Desejo de evitar gravidez,Endometriose,Consulta de orientação,18-24
-Mulher 9,49,Odontologia,Dor de dente,Gengivite,Canal,45-54
-Mulher 10,26,Histeroscopia Diagnóstica,Infertilidade,Hiperplasia endometrial,Acompanhamento clínico,25-34
-Mulher 11,33,Planejamento Reprodutivo,Dificuldade para engravidar,Síndrome do Ovário Policístico,Indução da ovulação,25-34
-Mulher 12,55,Odontologia,Sensibilidade nos dentes,Retração gengival,Enxerto gengival,55-64
-Mulher 13,41,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44
-Mulher 14,24,Planejamento Reprodutivo,Aconselhamento sobre métodos,Necessidade de contracepção,Inserção de DIU,18-24
-Mulher 15,62,Odontologia,Dificuldade de mastigação,Perda dentária,Implante dentário,55-64
-Mulher 16,38,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44
-Mulher 17,29,Odontologia,Dor de dente,Abscesso dentário,Drenagem e antibióticos,25-34
-Mulher 18,51,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento excessivo,Miomectomia,45-54
-Mulher 19,21,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Prescrição de pílulas,18-24
-Mulher 20,45,Odontologia,Dente quebrado,Fratura dentária,Coroa dentária,45-54
-Mulher 21,35,Histeroscopia Diagnóstica,Dor pélvica,Endometriose,Videolaparoscopia,35-44
-Mulher 22,58,Odontologia,Dificuldade de mastigação,Perda dentária,Prótese total,55-64
-Mulher 23,28,Planejamento Reprodutivo,Ciclos menstruais irregulares,Síndrome do Ovário Policístico,Metformina,25-34
-Mulher 24,47,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Biópsia,45-54
-Mulher 25,65,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste de prótese,65+
-Mulher 26,32,Odontologia,Mau hálito,Periodontite,Raspagem de tártaro,25-34
-Mulher 27,20,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Dismenorreia,Uso de AINEs,18-24
-Mulher 28,39,Planejamento Reprodutivo,Infertilidade,Baixa reserva ovariana,Fertilização in vitro,35-44
-Mulher 29,53,Odontologia,Desgaste dentário,Bruxismo,Placa de mordida,45-54
-Mulher 30,44,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Lise de sinéquias,35-44
-Mulher 31,68,Odontologia,Boca seca,Xerostomia,Uso de saliva artificial,65+
-Mulher 32,25,Histeroscopia Diagnóstica,Sangramento pós-relação,Cervicite,Antibioticoterapia,25-34
-Mulher 33,37,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Laqueadura,35-44
-Mulher 34,49,Odontologia,Cárie,Restauração,Restauração de resina,45-54
-Mulher 35,30,Odontologia,Dente quebrado,Fratura coronária,Pino e coroa,25-34
-Mulher 36,56,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,55-64
-Mulher 37,23,Histeroscopia Diagnóstica,Infertilidade,Obstrução tubária,Histerossalpingografia,18-24
-Mulher 38,42,Planejamento Reprodutivo,Menstruação excessiva,Mioma uterino,Ablação endometrial,35-44
-Mulher 39,61,Odontologia,Sangramento gengival,Gengivite,Limpeza profissional,55-64
-Mulher 40,50,Histeroscopia Diagnóstica,Adenomiose,Cólicas incapacitantes,Uso de DIU hormonal,45-54
-Mulher 41,26,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,25-34
-Mulher 42,34,Histeroscopia Diagnóstica,Dor pélvica crônica,Aderências pélvicas,Lise de aderências,25-34
-Mulher 43,52,Odontologia,Manchas nos dentes,Descoloração,Clareamento dental,45-54
-Mulher 44,22,Odontologia,Dente do siso,Dor e inflamação,Exodontia,18-24
-Mulher 45,40,Planejamento Reprodutivo,Aconselhamento genético,Risco de doença hereditária,Consulta com geneticista,35-44
-Mulher 46,70,Odontologia,Perda de dentes,Edentulismo parcial,Prótese parcial removível,65+
-Mulher 47,31,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,25-34
-Mulher 48,46,Histeroscopia Diagnóstica,Sangramento uterino anormal,Hiperplasia endometrial,Biópsia endometrial,45-54
-Mulher 49,28,Odontologia,Bruxismo,Desgaste dentário,Placa de mordida,25-34
-Mulher 50,59,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento,Miomectomia histeroscópica,55-64
-Mulher 51,36,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,35-44
-Mulher 52,43,Odontologia,Sensibilidade,Hipersensibilidade dentinária,Aplicação de flúor,35-44
-Mulher 53,64,Odontologia,Prótese antiga,Necessidade de troca,Nova prótese total,55-64
-Mulher 54,27,Odontologia,Cárie dentária,Dor de dente,Restauração,25-34
-Mulher 55,54,Histeroscopia Diagnóstica,Mioma submucoso,Ciclos menstruais irregulares,Miomectomia,45-54
-Mulher 56,33,Planejamento Reprodutivo,Endometriose leve,Desejo de engravidar,Acompanhamento da ovulação,25-34
-Mulher 57,48,Odontologia,Periodontite,Mobilidade dentária,Raspagem subgengival,45-54
-Mulher 58,24,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,18-24
-Mulher 59,67,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste ou troca de prótese,65+
-Mulher 60,41,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento,Histeroscopia cirúrgica,35-44
-Mulher 61,29,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento uterino anormal,Histeroscopia cirúrgica,25-34
-Mulher 62,57,Odontologia,Extração,Indicação de exodontia,Extração simples,55-64
-Mulher 63,39,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Irregularidade menstrual,Uso de contraceptivo,35-44
-Mulher 64,25,Odontologia,Gengivite,Sangramento gengival,Instrução de higiene oral,25-34
-Mulher 65,51,Histeroscopia Diagnóstica,Endometriose,Dor pélvica,Terapia hormonal,45-54
-Mulher 66,32,Planejamento Reprodutivo,Infertilidade sem causa aparente,Infertilidade,Acompanhamento,25-34
-Mulher 67,60,Odontologia,Implante,Avaliação para implante,Tomografia e planejamento,55-64
-Mulher 68,20,Planejamento Reprodutivo,Aconselhamento,Início da vida sexual,Orientação sobre métodos,18-24
-Mulher 69,45,Odontologia,Canal,Dor de dente pulsátil,Tratamento endodôntico,45-54
-Mulher 70,37,Histeroscopia Diagnóstica,Hiperplasia endometrial,Sangramento irregular,Acompanhamento com ultrassom,35-44
-Mulher 71,58,Odontologia,Coroa fraturada,Necessidade de nova coroa,Confecção de nova coroa,55-64
-Mulher 72,27,Planejamento Reprodutivo,Desejo de engravidar,Aconselhamento pré-concepcional,Uso de ácido fólico,25-34
-Mulher 73,42,Histeroscopia Diagnóstica,Mioma,Sangramento,Embolização de mioma,35-44
-Mulher 74,31,Odontologia,Obturação,Cárie secundária,Troca de restauração,25-34
-Mulher 75,66,Odontologia,Revisão de prótese,Desgaste,Manutenção,65+
-Mulher 76,22,Histeroscopia Diagnóstica,Mioma submucoso,Menstruação excessiva,Uso de DIU hormonal,18-24
-Mulher 77,49,Histeroscopia Diagnóstica,Pólipo,Sangramento,Polipectomia,45-54
-Mulher 78,35,Planejamento Reprodutivo,Endometriose,Infertilidade,Estimulação ovariana,35-44
-Mulher 79,63,Odontologia,Perda óssea dentária,Periodontite avançada,Cirurgia periodontal,55-64
-Mulher 80,28,Histeroscopia Diagnóstica,Cisto ovariano,Dor abdominal,Acompanhamento por imagem,25-34
-Mulher 81,52,Odontologia,Limpeza,Profilaxia de rotina,Raspagem supragengival,45-54
-Mulher 82,21,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,18-24
-Mulher 83,47,Histeroscopia Diagnóstica,Espessamento endometrial,Sangramento,Biópsia,45-54
-Mulher 84,33,Odontologia,Extração dentária,Dente do siso incluso,Exodontia,25-34
-Mulher 85,60,Planejamento Reprodutivo,Terapia de Reposição Hormonal,Sintomas da menopausa,TRH,55-64
-Mulher 86,29,Planejamento Reprodutivo,Desejo de adiar maternidade,Congelamento de óvulos,Estimulação ovariana e coleta,25-34
-Mulher 87,54,Histeroscopia Diagnóstica,Adenomiose,Cólicas intensas,Uso de DIU hormonal,45-54
-Mulher 88,38,Planejamento Reprodutivo,Consulta de rotina,Check-up ginecológico,Exame preventivo,35-44
-Mulher 89,44,Odontologia,Clareamento,Dentes amarelados,Clareamento a laser,35-44
-Mulher 90,26,Odontologia,Limpeza profissional,Profilaxia,Raspagem e polimento,25-34
-Mulher 91,55,Histeroscopia Diagnóstica,Mioma intramural,Aumento de volume abdominal,Acompanhamento,55-64
-Mulher 92,30,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Histeroscopia cirúrgica,25-34
-Mulher 93,41,Odontologia,Restauração infiltrada,Sensibilidade,Troca de restauração,35-44
-Mulher 94,69,Odontologia,Ponte fixa,Avaliação de prótese,Ajuste e higiene,65+
-Mulher 95,24,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Acne e irregularidade menstrual,Contraceptivo hormonal,18-24
-Mulher 96,50,Histeroscopia Diagnóstica,Rastreamento,Papanicolau,Exame preventivo,45-54
-Mulher 97,34,Planejamento Reprodutivo,Dúvidas sobre DIU,Aconselhamento,Consulta de orientação,25-34
-Mulher 98,46,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Investigação com biópsia,45-54
-Mulher 99,28,Odontologia,Gengivite,Sangramento ao escovar,Orientação de higiene oral,25-34
-Mulher 100,72,Odontologia,Revisão de implantes,Check-up,Radiografia e avaliação,65+
+PatientID,Age,HealthArea,Symptom,DiagnosedDisease,RecommendedTreatment,AgeRange,AppointmentMonth,AppointmentYear
+Mulher 1,48,Histeroscopia Diagnóstica,Dor pélvica,Hiperplasia endometrial,Raspagem endometrial,45-54,Janeiro,2023
+Mulher 2,31,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Hiperplasia endometrial,Uso de hormônios,25-34,Fevereiro,2022
+Mulher 3,50,Odontologia,Sangramento gengival,Cárie dentária,Extração dentária,45-54,Março,2024
+Mulher 4,42,Odontologia,Mau hálito,Gengivite,Obturação,35-44,Abril,2021
+Mulher 5,36,Odontologia,Mau hálito,Gengivite,Extração dentária,35-44,Maio,2025
+Mulher 6,19,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Cirurgia histeroscópica,18-24,Junho,2023
+Mulher 7,27,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Raspagem endometrial,25-34,Julho,2022
+Mulher 8,22,Planejamento Reprodutivo,Desejo de evitar gravidez,Endometriose,Consulta de orientação,18-24,Agosto,2024
+Mulher 9,49,Odontologia,Dor de dente,Gengivite,Canal,45-54,Setembro,2021
+Mulher 10,26,Histeroscopia Diagnóstica,Infertilidade,Hiperplasia endometrial,Acompanhamento clínico,25-34,Outubro,2025
+Mulher 11,33,Planejamento Reprodutivo,Dificuldade para engravidar,Síndrome do Ovário Policístico,Indução da ovulação,25-34,Novembro,2023
+Mulher 12,55,Odontologia,Sensibilidade nos dentes,Retração gengival,Enxerto gengival,55-64,Dezembro,2022
+Mulher 13,41,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44,Janeiro,2024
+Mulher 14,24,Planejamento Reprodutivo,Aconselhamento sobre métodos,Necessidade de contracepção,Inserção de DIU,18-24,Fevereiro,2021
+Mulher 15,62,Odontologia,Dificuldade de mastigação,Perda dentária,Implante dentário,55-64,Março,2025
+Mulher 16,38,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44,Abril,2023
+Mulher 17,29,Odontologia,Dor de dente,Abscesso dentário,Drenagem e antibióticos,25-34,Maio,2022
+Mulher 18,51,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento excessivo,Miomectomia,45-54,Junho,2024
+Mulher 19,21,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Prescrição de pílulas,18-24,Julho,2021
+Mulher 20,45,Odontologia,Dente quebrado,Fratura dentária,Coroa dentária,45-54,Agosto,2025
+Mulher 21,35,Histeroscopia Diagnóstica,Dor pélvica,Endometriose,Videolaparoscopia,35-44,Setembro,2023
+Mulher 22,58,Odontologia,Dificuldade de mastigação,Perda dentária,Prótese total,55-64,Outubro,2022
+Mulher 23,28,Planejamento Reprodutivo,Ciclos menstruais irregulares,Síndrome do Ovário Policístico,Metformina,25-34,Novembro,2024
+Mulher 24,47,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Biópsia,45-54,Dezembro,2021
+Mulher 25,65,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste de prótese,65+,Janeiro,2025
+Mulher 26,32,Odontologia,Mau hálito,Periodontite,Raspagem de tártaro,25-34,Fevereiro,2023
+Mulher 27,20,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Dismenorreia,Uso de AINEs,18-24,Março,2022
+Mulher 28,39,Planejamento Reprodutivo,Infertilidade,Baixa reserva ovariana,Fertilização in vitro,35-44,Abril,2024
+Mulher 29,53,Odontologia,Desgaste dentário,Bruxismo,Placa de mordida,45-54,Maio,2021
+Mulher 30,44,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Lise de sinéquias,35-44,Junho,2025
+Mulher 31,68,Odontologia,Boca seca,Xerostomia,Uso de saliva artificial,65+,Julho,2023
+Mulher 32,25,Histeroscopia Diagnóstica,Sangramento pós-relação,Cervicite,Antibioticoterapia,25-34,Agosto,2022
+Mulher 33,37,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Laqueadura,35-44,Setembro,2024
+Mulher 34,49,Odontologia,Cárie,Restauração,Restauração de resina,45-54,Outubro,2021
+Mulher 35,30,Odontologia,Dente quebrado,Fratura coronária,Pino e coroa,25-34,Novembro,2025
+Mulher 36,56,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,55-64,Dezembro,2023
+Mulher 37,23,Histeroscopia Diagnóstica,Infertilidade,Obstrução tubária,Histerossalpingografia,18-24,Janeiro,2022
+Mulher 38,42,Planejamento Reprodutivo,Menstruação excessiva,Mioma uterino,Ablação endometrial,35-44,Fevereiro,2024
+Mulher 39,61,Odontologia,Sangramento gengival,Gengivite,Limpeza profissional,55-64,Março,2021
+Mulher 40,50,Histeroscopia Diagnóstica,Adenomiose,Cólicas incapacitantes,Uso de DIU hormonal,45-54,Abril,2025
+Mulher 41,26,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,25-34,Maio,2023
+Mulher 42,34,Histeroscopia Diagnóstica,Dor pélvica crônica,Aderências pélvicas,Lise de aderências,25-34,Junho,2022
+Mulher 43,52,Odontologia,Manchas nos dentes,Descoloração,Clareamento dental,45-54,Julho,2024
+Mulher 44,22,Odontologia,Dente do siso,Dor e inflamação,Exodontia,18-24,Agosto,2021
+Mulher 45,40,Planejamento Reprodutivo,Aconselhamento genético,Risco de doença hereditária,Consulta com geneticista,35-44,Setembro,2025
+Mulher 46,70,Odontologia,Perda de dentes,Edentulismo parcial,Prótese parcial removível,65+,Outubro,2023
+Mulher 47,31,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,25-34,Novembro,2022
+Mulher 48,46,Histeroscopia Diagnóstica,Sangramento uterino anormal,Hiperplasia endometrial,Biópsia endometrial,45-54,Dezembro,2024
+Mulher 49,28,Odontologia,Bruxismo,Desgaste dentário,Placa de mordida,25-34,Janeiro,2021
+Mulher 50,59,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento,Miomectomia histeroscópica,55-64,Fevereiro,2025
+Mulher 51,36,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,35-44,Março,2023
+Mulher 52,43,Odontologia,Sensibilidade,Hipersensibilidade dentinária,Aplicação de flúor,35-44,Abril,2022
+Mulher 53,64,Odontologia,Prótese antiga,Necessidade de troca,Nova prótese total,55-64,Maio,2024
+Mulher 54,27,Odontologia,Cárie dentária,Dor de dente,Restauração,25-34,Junho,2021
+Mulher 55,54,Histeroscopia Diagnóstica,Mioma submucoso,Ciclos menstruais irregulares,Miomectomia,45-54,Julho,2025
+Mulher 56,33,Planejamento Reprodutivo,Endometriose leve,Desejo de engravidar,Acompanhamento da ovulação,25-34,Agosto,2023
+Mulher 57,48,Odontologia,Periodontite,Mobilidade dentária,Raspagem subgengival,45-54,Setembro,2022
+Mulher 58,24,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,18-24,Outubro,2024
+Mulher 59,67,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste ou troca de prótese,65+,Novembro,2021
+Mulher 60,41,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento,Histeroscopia cirúrgica,35-44,Dezembro,2025
+Mulher 61,29,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento uterino anormal,Histeroscopia cirúrgica,25-34,Janeiro,2023
+Mulher 62,57,Odontologia,Extração,Indicação de exodontia,Extração simples,55-64,Fevereiro,2022
+Mulher 63,39,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Irregularidade menstrual,Uso de contraceptivo,35-44,Março,2024
+Mulher 64,25,Odontologia,Gengivite,Sangramento gengival,Instrução de higiene oral,25-34,Abril,2021
+Mulher 65,51,Histeroscopia Diagnóstica,Endometriose,Dor pélvica,Terapia hormonal,45-54,Maio,2025
+Mulher 66,32,Planejamento Reprodutivo,Infertilidade sem causa aparente,Infertilidade,Acompanhamento,25-34,Junho,2023
+Mulher 67,60,Odontologia,Implante,Avaliação para implante,Tomografia e planejamento,55-64,Julho,2022
+Mulher 68,20,Planejamento Reprodutivo,Aconselhamento,Início da vida sexual,Orientação sobre métodos,18-24,Agosto,2024
+Mulher 69,45,Odontologia,Canal,Dor de dente pulsátil,Tratamento endodôntico,45-54,Setembro,2021
+Mulher 70,37,Histeroscopia Diagnóstica,Hiperplasia endometrial,Sangramento irregular,Acompanhamento com ultrassom,35-44,Outubro,2025
+Mulher 71,58,Odontologia,Coroa fraturada,Necessidade de nova coroa,Confecção de nova coroa,55-64,Novembro,2023
+Mulher 72,27,Planejamento Reprodutivo,Desejo de engravidar,Aconselhamento pré-concepcional,Uso de ácido fólico,25-34,Dezembro,2022
+Mulher 73,42,Histeroscopia Diagnóstica,Mioma,Sangramento,Embolização de mioma,35-44,Janeiro,2024
+Mulher 74,31,Odontologia,Obturação,Cárie secundária,Troca de restauração,25-34,Fevereiro,2021
+Mulher 75,66,Odontologia,Revisão de prótese,Desgaste,Manutenção,65+,Março,2025
+Mulher 76,22,Histeroscopia Diagnóstica,Mioma submucoso,Menstruação excessiva,Uso de DIU hormonal,18-24,Abril,2023
+Mulher 77,49,Histeroscopia Diagnóstica,Pólipo,Sangramento,Polipectomia,45-54,Maio,2022
+Mulher 78,35,Planejamento Reprodutivo,Endometriose,Infertilidade,Estimulação ovariana,35-44,Junho,2024
+Mulher 79,63,Odontologia,Perda óssea dentária,Periodontite avançada,Cirurgia periodontal,55-64,Julho,2021
+Mulher 80,28,Histeroscopia Diagnóstica,Cisto ovariano,Dor abdominal,Acompanhamento por imagem,25-34,Agosto,2025
+Mulher 81,52,Odontologia,Limpeza,Profilaxia de rotina,Raspagem supragengival,45-54,Setembro,2023
+Mulher 82,21,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,18-24,Outubro,2022
+Mulher 83,47,Histeroscopia Diagnóstica,Espessamento endometrial,Sangramento,Biópsia,45-54,Novembro,2024
+Mulher 84,33,Odontologia,Extração dentária,Dente do siso incluso,Exodontia,25-34,Dezembro,2021
+Mulher 85,60,Planejamento Reprodutivo,Terapia de Reposição Hormonal,Sintomas da menopausa,TRH,55-64,Janeiro,2025
+Mulher 86,29,Planejamento Reprodutivo,Desejo de adiar maternidade,Congelamento de óvulos,Estimulação ovariana e coleta,25-34,Fevereiro,2023
+Mulher 87,54,Histeroscopia Diagnóstica,Adenomiose,Cólicas intensas,Uso de DIU hormonal,45-54,Março,2022
+Mulher 88,38,Planejamento Reprodutivo,Consulta de rotina,Check-up ginecológico,Exame preventivo,35-44,Abril,2024
+Mulher 89,44,Odontologia,Clareamento,Dentes amarelados,Clareamento a laser,35-44,Maio,2021
+Mulher 90,26,Odontologia,Limpeza profissional,Profilaxia,Raspagem e polimento,25-34,Junho,2025
+Mulher 91,55,Histeroscopia Diagnóstica,Mioma intramural,Aumento de volume abdominal,Acompanhamento,55-64,Julho,2023
+Mulher 92,30,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Histeroscopia cirúrgica,25-34,Agosto,2022
+Mulher 93,41,Odontologia,Restauração infiltrada,Sensibilidade,Troca de restauração,35-44,Setembro,2024
+Mulher 94,69,Odontologia,Ponte fixa,Avaliação de prótese,Ajuste e higiene,65+,Outubro,2021
+Mulher 95,24,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Acne e irregularidade menstrual,Contraceptivo hormonal,18-24,Novembro,2025
+Mulher 96,50,Histeroscopia Diagnóstica,Rastreamento,Papanicolau,Exame preventivo,45-54,Dezembro,2023
+Mulher 97,34,Planejamento Reprodutivo,Dúvidas sobre DIU,Aconselhamento,Consulta de orientação,25-34,Janeiro,2022
+Mulher 98,46,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Investigação com biópsia,45-54,Fevereiro,2024
+Mulher 99,28,Odontologia,Gengivite,Sangramento ao escovar,Orientação de higiene oral,25-34,Março,2021
+Mulher 100,72,Odontologia,Revisão de implantes,Check-up,Radiografia e avaliação,65+,Abril,2025
