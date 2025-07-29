@@ -15,6 +15,7 @@
     import Tooltip from '$lib/components/common/Tooltip.svelte';
     import EyeSlash from '$lib/components/icons/EyeSlash.svelte';
     import MessageInput from './MessageInput.svelte';
+	import { list } from 'postcss';
 
     const i18n = getContext('i18n');
 
@@ -31,6 +32,8 @@
     export let history;
 
     export let prompt = '';
+    export let suggestionPrompts = [];
+    export let showSuggestionsPromptsFromModel =  false;
     export let files = [];
 
     export let selectedToolIds = [];
@@ -39,6 +42,9 @@
     export let imageGenerationEnabled = false;
     export let codeInterpreterEnabled = false;
     export let webSearchEnabled = false;
+
+    export let promptGeneratedByModel = '';
+    
 
     export let toolServers = [];
 
@@ -81,7 +87,6 @@
 
     let selectedModelIdx = 0;
 
-    // CÓDIGO MODIFICADO ABAIXO
     let tituloVisivel = true; // Controla a visibilidade do título
 
     onMount(() => {
@@ -100,6 +105,37 @@
     }
 
     $: models = selectedModels.map((id) => $_models.find((m) => m.id === id));
+
+    let suggestionsListModel
+
+    $: suggestionsListModel = promptGeneratedByModel.split('\n').filter(line => line.trim() !== '');
+
+    const staticSuggestionsPrompts = [
+        {
+            title: ['Saúde do Coração', 'Cardiologia'],
+            content: 'Quais são os principais fatores de risco para doenças cardíacas e como posso manter meu coração saudável? Quais são os sinais de alerta que indicam problemas cardíacos?'
+        },
+        {
+            title: ['Ouvido, Nariz e Garganta', 'Otorrinolaringologia'],
+            content: 'Quando devo procurar um otorrinolaringologista? Quais são os sintomas mais comuns de problemas nessas áreas e como posso cuidar da higiene diária para evitar infecções?'
+        },
+        {
+            title: ['Cuidados com a Pele', 'Dermatologia'],
+            content: 'Quais são os cuidados essenciais com a pele para prevenir doenças e o envelhecimento precoce, especialmente considerando o clima de Recife? Como identificar sinais de alerta de câncer de pele?'
+        },
+        {
+            title: ['Ossos e Articulações', 'Ortopedia'],
+            content: 'Quais são as melhores práticas para manter a saúde dos ossos e articulações, principalmente para quem pratica atividades físicas? Quando é necessário procurar um ortopedista para dores?'
+        },
+        {
+            title: ['Saúde Ocular', 'Oftalmologia'],
+            content: 'Quais são os principais sinais de alerta para problemas de visão e com que frequência devo fazer exames de vista? Como posso proteger meus olhos da exposição excessiva a telas?'
+        },
+        {
+            title: ['Saúde Feminina e Masculina', 'Ginecologia e Urologia'],
+            content: 'Quais são os exames preventivos de rotina mais importantes para a saúde feminina e masculina, e qual a periodicidade recomendada? Quais sinais de alerta exigem atenção médica imediata?'
+        }
+    ];
 
 </script>
 
@@ -127,7 +163,7 @@
                         class="text-3xl @sm:text-3xl line-clamp-1"
                         transition:fade={{ duration: 400 }}
                     >
-				            Bem Vindo!
+				            Bem Vindo, {$user?.name ?? $user?.username ?? 'Usuário'}!
                     </div>
                 {/if}
             </div>
@@ -176,6 +212,8 @@
                     {selectedModels}
                     bind:files
                     bind:prompt
+                    bind:promptGeneratedByModel
+                    bind:showSuggestionsPromptsFromModel
                     bind:autoScroll
                     bind:selectedToolIds
                     bind:selectedFilterIds
@@ -206,41 +244,72 @@
     </div>
     
     <div class="mx-auto max-w-2xl font-primary mt-2" in:fade={{ duration: 200, delay: 200 }}>
-        <div class="mx-5">
-            <Suggestions
-                suggestionPrompts={
-                    [
-                        {
-                            "title": ["Saúde do Coração", "Cardiologia"],
-                            "content": "Quais são os principais fatores de risco para doenças cardíacas e como posso preveni-los? Existem exames preventivos recomendados a partir de alguma idade específica?"
-                        },
-                        {
-                            "title": ["Ouvido, Nariz e Garganta", "Otorrinolaringologia"],
-                            "content": "Quando devo procurar um otorrinolaringologista? Quais são os sintomas mais comuns de problemas nessas áreas e como posso cuidar da higiene diária para evitar infecções?"
-                        },
-                        {
-                            "title": ["Cuidados com a Pele", "Dermatologia"],
-                            "content": "Quais são os cuidados essenciais com a pele para prevenir doenças e o envelhecimento precoce, especialmente considerando o clima de Recife? Como identificar sinais de alerta de câncer de pele?"
-                        },
-                        {
-                            "title": ["Ossos e Articulações", "Ortopedia"],
-                            "content": "Quais são as melhores práticas para manter a saúde dos ossos e articulações, principalmente para quem pratica atividades físicas? Quando é necessário procurar um ortopedista para dores?"
-                        },
-                        {
-                            "title": ["Saúde Ocular", "Oftalmologia"],
-                            "content": "Quais são os principais sinais de alerta para problemas de visão e com que frequência devo fazer exames de vista? Como posso proteger meus olhos da exposição excessiva a telas?"
-                        },
-                        {
-                            "title": ["Saúde Feminina e Masculina", "Ginecologia e Urologia"],
-                            "content": "Quais são os exames preventivos de rotina mais importantes para a saúde feminina e masculina, e qual a periodicidade recomendada? Quais sinais de alerta exigem atenção médica imediata?"
-                        }
-                    ]
-                }
-                inputValue={prompt}
-                on:select={(e) => {
-                    selectSuggestionPrompt(e.detail);
-                }}
-            />
+        <div class="mx-5">    
+            {#if suggestionsListModel.length > 0 && showSuggestionsPromptsFromModel}
+               
+               <div class="relative w-full">
+                        <button
+                            on:click={() => (showSuggestionsPromptsFromModel = false)}
+                            
+                            class="absolute top-2 -right-2 z-10 p-1 rounded-full text-gray-500 hover:bg-red-500/20 hover:text-red-500 transition-colors"
+                            aria-label="Fechar sugestões"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2.5"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        <Suggestions
+                            showSuggestionsPromptsFromModel={showSuggestionsPromptsFromModel}
+                            suggestionsListModel={
+                                [
+
+                                    {
+                                        id: 'p1',
+                                        content: suggestionsListModel ? suggestionsListModel[0] : 'ocorreu um erro ao gerar o prompt'
+                                    },
+                                    {
+                                        id: 'p2',
+                                        content: suggestionsListModel ? suggestionsListModel[1] : 'ocorreu um erro ao gerar o prompt'
+                                    },
+                                    {
+                                        id: 'p3',
+                                        content: suggestionsListModel ? suggestionsListModel[2] : 'ocorreu um erro ao gerar o prompt'
+                                    },
+                                    {
+                                        id: 'p4',
+                                        content: suggestionsListModel ? suggestionsListModel[3] : 'ocorreu um erro ao gerar o prompt'
+                                    }
+                                ]
+
+                            }
+                                inputValue={prompt}
+                                on:select={(e) => {
+                                    selectSuggestionPrompt(e.detail);
+                                }}    
+                        />
+                </div>
+
+            {:else}
+                <Suggestions
+                        showSuggestionsPromptsFromModel={showSuggestionsPromptsFromModel}
+                        suggestionPrompts={staticSuggestionsPrompts}
+                            inputValue={prompt}
+                            on:select={(e) => {
+                                selectSuggestionPrompt(e.detail);
+                            }}    
+                />
+            {/if}
+                
+
+
         </div>
     </div>
 </div>

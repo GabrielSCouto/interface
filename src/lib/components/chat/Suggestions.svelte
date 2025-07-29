@@ -12,6 +12,8 @@
 	export let className = '';
 	export let inputValue = '';
 
+	export let showSuggestionsPromptsFromModel;
+
 	let sortedPrompts = [];
 
 	const fuseOptions = {
@@ -62,62 +64,97 @@
 		sortedPrompts = [...(suggestionPrompts ?? [])].sort(() => Math.random() - 0.5);
 		getFilteredPrompts(inputValue);
 	}
+
+	export let suggestionsListModel = [];
+
+
 </script>
 
-<div class="mb-1 flex gap-1 text-xs font-medium items-center text-gray-600 dark:text-gray-400">
-	{#if filteredPrompts.length > 0}
-		<Bolt />
-		{$i18n.t('Sugerido')}
-	{:else}
-		<!-- Keine Vorschläge -->
+{#if !showSuggestionsPromptsFromModel}
 
-		<div
-			class="flex w-full {$settings?.landingPageMode === 'chat'
-				? ' -mt-1'
-				: 'text-center items-center justify-center'}  self-start text-gray-600 dark:text-gray-400"
-		>
-			{$WEBUI_NAME} ‧ v{WEBUI_VERSION}
-		</div>
-	{/if}
-</div>
+		<div class="mb-1 flex gap-1 text-xs font-medium items-center text-gray-600 dark:text-gray-400">
+			{#if filteredPrompts.length > 0}
+				<Bolt />
+				{$i18n.t('Sugerido')}
+			{:else}
+				<!-- Keine Vorschläge -->
 
-<div class="h-40 w-full">
-	{#if filteredPrompts.length > 0}
-		<div class="max-h-40 overflow-auto scrollbar-none items-start {className}">
-			{#each filteredPrompts as prompt, idx (prompt.id || prompt.content)}
-				<button
-					class="waterfall flex flex-col flex-1 shrink-0 w-full justify-between
-				       px-3 py-2 rounded-xl bg-transparent hover:bg-black/5
-				       dark:hover:bg-white/5 transition group"
-					style="animation-delay: {idx * 60}ms"
-					on:click={() => dispatch('select', prompt.content)}
+				<div
+					class="flex w-full {$settings?.landingPageMode === 'chat'
+						? ' -mt-1'
+						: 'text-center items-center justify-center'}  self-start text-gray-600 dark:text-gray-400"
 				>
-					<div class="flex flex-col text-left">
-						{#if prompt.title && prompt.title[0] !== ''}
-							<div
-								class="font-medium dark:text-gray-300 dark:group-hover:text-gray-200 transition line-clamp-1"
-							>
-								{prompt.title[0]}
-							</div>
-							<div class="text-xs text-gray-600 dark:text-gray-400 font-normal line-clamp-1">
-								{prompt.title[1]}
-							</div>
-						{:else}
-							<div
-								class="font-medium dark:text-gray-300 dark:group-hover:text-gray-200 transition line-clamp-1"
-							>
-								{prompt.content}
-							</div>
-							<div class="text-xs text-gray-600 dark:text-gray-400 font-normal line-clamp-1">
-								{$i18n.t('Prompt')}
-							</div>
-						{/if}
-					</div>
-				</button>
-			{/each}
+					{$WEBUI_NAME} ‧ v{WEBUI_VERSION}
+				</div>
+			{/if}
 		</div>
-	{/if}
-</div>
+
+
+
+		<div class="h-40 w-full">
+			{#if filteredPrompts.length > 0}
+				<div class="max-h-40 overflow-auto scrollbar-none items-start {className}">
+					{#each filteredPrompts as prompt, idx (prompt.id || prompt.content)}
+						<button
+							class="waterfall flex flex-col flex-1 shrink-0 w-full justify-between
+							px-3 py-2 rounded-xl bg-transparent hover:bg-black/5
+							dark:hover:bg-white/5 transition group"
+							style="animation-delay: {idx * 60}ms"
+							on:click={() => dispatch('select', prompt.content)}
+						>
+							<div class="flex flex-col text-left">
+								{#if prompt.title && prompt.title[0] !== ''}
+									<div
+										class="font-medium dark:text-gray-300 dark:group-hover:text-gray-200 transition line-clamp-1"
+									>
+										{prompt.title[0]}
+									</div>
+									<div class="text-xs text-gray-600 dark:text-gray-400 font-normal line-clamp-1">
+										{prompt.title[1]}
+									</div>
+								{:else}
+									<div
+										class="font-medium dark:text-gray-300 dark:group-hover:text-gray-200 transition line-clamp-1"
+									>
+										{prompt.content}
+									</div>
+									<div class="text-xs text-gray-600 dark:text-gray-400 font-normal line-clamp-1">
+										{$i18n.t('Prompt')}
+									</div>
+								{/if}
+							</div>
+						</button>
+					{/each}
+				</div>
+			{/if}
+		</div>
+
+{:else}
+    <div class="relative h-40 w-full rounded-lg bg-gray-50 dark:bg-gray-900 p-4">
+
+        {#if suggestionsListModel.length > 0}
+            <div class="max-h-full overflow-auto scrollbar-none items-start">
+                {#each suggestionsListModel as prompt, idx (prompt.id)}
+                    <button
+                        class="waterfall flex flex-col flex-1 shrink-0 w-full justify-between
+                            px-3 py-2 rounded-xl bg-transparent hover:bg-black/5
+                            dark:hover:bg-white/5 transition group text-gray-800 dark:text-gray-200"
+                        style="animation-delay: {idx * 60}ms"
+                        on:click={() => dispatch('select', prompt.content)}
+                    >
+                        <div class="flex text-left">
+                            <div
+                                class="font-medium dark:text-gray-300 dark:group-hover:text-gray-200 transition"
+                            >
+                                {prompt.content}
+                            </div>
+                        </div>
+                    </button>
+                {/each}
+            </div>
+        {/if}
+    </div>
+{/if}
 
 <style>
 	/* Waterfall animation for the suggestions */

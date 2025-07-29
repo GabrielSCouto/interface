@@ -74,10 +74,17 @@
 	let selectedModelIds = [];
 	$: selectedModelIds = atSelectedModel !== undefined ? [atSelectedModel.id] : selectedModels;
 
+	let hideTalkingToModel = true;
+
+	//quando o hideTalking for verdadeiro irá mostrar o modelo selecionado, mas quando os promprs estiverem definidos, ele irá sumir e apresentará os prompts pelo show
+
+	export let showSuggestionsPromptsFromModel = false;
+
 	export let history;
 	export let taskIds = null;
 
 	export let prompt = '';
+	export let promptGeneratedByModel = '';
 	export let files = [];
 
 	export let toolServers = [];
@@ -91,6 +98,8 @@
 
 	$: onChange({
 		prompt,
+		promptGeneratedByModel,
+		showSuggestionsPromptsFromModel,
 		files: files.filter((file) => file.type !== 'image'),
 		selectedToolIds,
 		selectedFilterIds,
@@ -116,8 +125,6 @@
 
 	let dragged = false;
 	let shiftKey = false;
-
-	let hideTalkingToModel = false;
 
 	let user = null;
 	export let placeholder = '';
@@ -181,6 +188,9 @@
 			codeInterpreterCapableModels.length &&
 		$config?.features?.enable_code_interpreter &&
 		($_user.role === 'admin' || $_user?.permissions?.features?.code_interpreter);
+
+	
+	
 
 	const scrollToBottom = () => {
 		const element = document.getElementById('messages-container');
@@ -1370,7 +1380,7 @@
 																const messages = [
 																	{
 																		role: 'system',
-																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only one prompt and do not write anything else."
+																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only four prompt and do not write anything else. the prompts must be separated by a new line. Do not write any other text.",
 																	},
 																	{
 																		role: 'user',
@@ -1394,11 +1404,13 @@
 																console.log("Estrutura completa da resposta recebida:", resposta);
 
 																const mensagemDaIA = resposta?.choices?.[0]?.message?.content;
+
+																promptGeneratedByModel = mensagemDaIA
 																	
 																if (mensagemDaIA) {
-																	console.log("Resposta da IA:", mensagemDaIA);
-																	prompt = mensagemDaIA;
+																	console.log("Resposta da IA:", promptGeneratedByModel);
 																	hideTalkingToModel = true;
+																	showSuggestionsPromptsFromModel = true;
 																} else {
 																
 																	console.error("Não foi possível encontrar 'content' na resposta. Verifique a estrutura do objeto acima.");
@@ -1422,8 +1434,10 @@
 														/>
 													</svg>
 												</button>
-											</Tooltip>
 
+												
+
+											</Tooltip>
 
 											<Tooltip content={$i18n.t('Áudio')}>
 												<button
