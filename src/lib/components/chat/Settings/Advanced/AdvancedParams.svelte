@@ -11,7 +11,7 @@
 
 	export let admin = false;
 	export let custom = false;
-
+	
 	const defaultParams = {
 		// Advanced
 		stream_response: null, // Set stream responses for this model individually
@@ -357,10 +357,10 @@
   <div class="flex flex-nowrap gap-1">
     <button
       class="px-2 py-0.5 text-[10px] rounded transition-all duration-200 ease-in-out hover:scale-[1.05] active:scale-[0.95]"
-      class:bg-blue-600={params.max_tokens === 200}
-      class:text-white={params.max_tokens === 200}
+      class:bg-blue-600={params.max_tokens === 400}
+      class:text-white={params.max_tokens === 400}
       on:click={() => {
-        params.max_tokens = 200;
+        params.max_tokens = 400;
        // params.stop = ["\nUsuário:", "\nHuman:", "\n###"];
       }}
     >
