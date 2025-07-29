@@ -1380,7 +1380,7 @@
 																const messages = [
 																	{
 																		role: 'system',
-																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only four prompt and do not write anything else. the prompts must be separated by a new line. Do not write any other text.",
+																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only four prompt and do not write anything else. the prompts must be separated by a new line. Do not write any other text. ask the diagnosis in each prompt.",
 																	},
 																	{
 																		role: 'user',
