@@ -133,6 +133,13 @@
     <div class="relative h-40 w-full rounded-lg bg-gray-50 dark:bg-gray-900 p-4">
 
         {#if suggestionsListModel.length > 0}
+
+			<div class="mb-1 flex gap-1 text-xs font-medium items-center text-gray-600 dark:text-gray-400">
+					<Bolt />
+					Prompts sugeridos pelo modelo
+			</div>
+
+
             <div class="max-h-full overflow-auto scrollbar-none items-start">
                 {#each suggestionsListModel as prompt, idx (prompt.id)}
                     <button
