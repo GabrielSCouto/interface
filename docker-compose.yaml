@@ -1,19 +1,13 @@
 services:
   ollama:
-    build:
-      context: .
-      dockerfile: Dockerfile.ollama
-    volumes:
-      - ollama:/root/.ollama
-      - ./modelfiles:/modelfiles
+    image: ollama/ollama
     container_name: ollama
-    tty: true
-    restart: unless-stopped
     ports:
       - "11434:11434"
-    entrypoint: ["/entrypoint.sh"]
-    pull_policy: always
-    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+    volumes:
+      - /usr/share/ollama/.ollama:/root/.ollama
+    tty: true
+    restart: unless-stopped
 
   open-webui:
     build:
@@ -37,10 +31,18 @@ services:
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='
       - 'NODE_OPTIONS=--max-old-space-size=8192'
-    extra_hosts:
-      - host.docker.internal:host-gateway
     restart: unless-stopped
+
+  pipelines:
+      image: ghcr.io/open-webui/pipelines:main
+      volumes:
+        - pipelines:/app/pipelines
+      restart: always
+      environment:
+        - PIPELINES_API_KEY=0p3n-w3bu!
 
 volumes:
   ollama: {}
   open-webui: {}
+  pipelines: {}
+
