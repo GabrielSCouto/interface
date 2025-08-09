@@ -64,7 +64,9 @@
 	import MagnifyingGlass from '../icons/MagnifyingGlass.svelte';
 	import SearchModal from './SearchModal.svelte';
 	import Calendar from '../icons/Calendar.svelte';
-
+	import UserList from '../admin/Users/UserList.svelte';
+	import Popup from '../popup.svelte';
+	import { list } from 'postcss';
 	const BREAKPOINT = 768;
 
 	let navElement;
@@ -76,7 +78,8 @@
 
 	let showCreateChannel = false;
 
-	let calendarioVisivel = false; //
+	let calendarioVisivel = false; 
+	let knowledgeVisivel = false; 
 
 	// Pagination variables
 	let chatListLoading = false;
@@ -397,6 +400,19 @@
 		dropZone?.removeEventListener('drop', onDrop);
 		dropZone?.removeEventListener('dragleave', onDragLeave);
 	});
+
+function abrirPopup() {
+    knowledgeVisivel = true;
+  }
+
+  function fecharPopup() {
+    knowledgeVisivel = false;
+  }
+
+function irParaKnowledge(){
+	goto('/workspace/knowledge');
+}
+
 </script>
 
 <ArchivedChatsModal
@@ -569,35 +585,111 @@
 			</button>
 		</div>
 
-		<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
-			<button
-				class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition outline-none"
-				on:click={() => {
-					calendarioVisivel = !calendarioVisivel;
-				}}
-				draggable="false"
-			>
-				<div class="self-center">
-					<Calendar strokeWidth="2" className="size-[1.1rem]" />
-				</div>
-				<div class="flex self-center translate-y-[0.5px]">
-					<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Agenda')}</div>
-				</div>
-			</button>
-		</div>
+		{#if $user?.role === 'admin'}
 
-		{#if calendarioVisivel}
-			<div class="calendar-wrapper">
-				<CalendarioMarcador />
+			<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
+				<button
+					class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition outline-none"
+					on:click={() => {
+						knowledgeVisivel = !knowledgeVisivel;
+						if(!knowledgeVisivel) {
+							irParaKnowledge();
+						}else{
+							goto('/')
+						}						
+					}}
+					draggable="false"
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="size-5 shrink-0"
+					>
+						<circle cx="12" cy="6" r="4" />
+						<path d="M4 20v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1" />
+					</svg>
+
+					<div class="font-medium text-sm font-primary">{$i18n.t('Base de conhecimentos')}</div>
+				</button>
 			</div>
-		{/if}
+			
+			<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
+				<button
+					class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition outline-none"
+					on:click={() => {
+						calendarioVisivel = !calendarioVisivel;
+					}}
+					draggable="false"
+				>
+					<div class="self-center">
+						<Calendar strokeWidth="2" className="size-[1.1rem]" />
+					</div>
+					<div class="flex self-center translate-y-[0.5px]">
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Agenda')}</div>
+					</div>
+				</button>
+			</div>
 
-		{#if ($config?.features?.enable_notes ?? false) && ($user?.role === 'admin' || ($user?.permissions?.features?.notes ?? true))}
+			{#if calendarioVisivel}
+				<div class="calendar-wrapper">
+					<CalendarioMarcador />
+				</div>
+			{/if}	
+
+
+			{#if ($config?.features?.enable_notes ?? false) && ($user?.role === 'admin' || ($user?.permissions?.features?.notes ?? true))}
+				<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
+					<a
+						class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+						href="/notes"
+						on:click={() => {
+							selectedChatId = null;
+							chatId.set('');
+
+							if ($mobile) {
+								showSidebar.set(false);
+							}
+						}}
+						draggable="false"
+					>
+						<div class="self-center">
+							<svg
+								class="size-4"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"
+								/>
+							</svg>
+						</div>
+
+						<div class="flex self-center translate-y-[0.5px]">
+							<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Notas')}</div>
+						</div>
+					</a>
+				</div>
+			{/if}
+
 			<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
 				<a
 					class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition"
-					href="/notes"
+					href="/dashboard"
 					on:click={() => {
+
 						selectedChatId = null;
 						chatId.set('');
 
@@ -609,69 +701,28 @@
 				>
 					<div class="self-center">
 						<svg
-							class="size-4"
-							aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
 							fill="none"
 							viewBox="0 0 24 24"
+							stroke-width="2"
+							stroke="currentColor"
+							class="size-[1.1rem]"
 						>
 							<path
-								stroke="currentColor"
 								stroke-linecap="round"
 								stroke-linejoin="round"
-								stroke-width="2"
-								d="M10 3v4a1 1 0 0 1-1 1H5m4 8h6m-6-4h6m4-8v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"
+								d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
 							/>
 						</svg>
 					</div>
 
 					<div class="flex self-center translate-y-[0.5px]">
-						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Notas')}</div>
+						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Dashboard')}</div>
 					</div>
 				</a>
 			</div>
+
 		{/if}
-
-		<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
-			<a
-				class="grow flex items-center space-x-3 rounded-lg px-2 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition"
-				href="/dashboard"
-				on:click={() => {
-
-					selectedChatId = null;
-					chatId.set('');
-
-					if ($mobile) {
-						showSidebar.set(false);
-					}
-				}}
-				draggable="false"
-			>
-				<div class="self-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="2"
-						stroke="currentColor"
-						class="size-[1.1rem]"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
-						/>
-					</svg>
-				</div>
-
-				<div class="flex self-center translate-y-[0.5px]">
-					<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Dashboard')}</div>
-				</div>
-			</a>
-		</div>
-
 
 		<div
 			class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden {$temporaryChatEnabled
