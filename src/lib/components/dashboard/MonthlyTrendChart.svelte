@@ -1,8 +1,8 @@
 <script>
     import { Line } from 'svelte-chartjs';
-	import { Chart, Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale } from 'chart.js';
+    import { Chart, Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale } from 'chart.js';
 
-	Chart.register(Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale);
+    Chart.register(Title, Tooltip, Legend, LineElement, PointElement, CategoryScale, LinearScale);
     
     export let data = [];
 
@@ -11,45 +11,66 @@
         'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
     ];
 
-    let chartData = {};
-    let chartOptions = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top',
-            },
-        },
-        tension: 0.1 
+    $: chartData = {
+        labels: monthsOfTheYear,
+        datasets: [{
+            label: 'Consultas por Mês',
+            data: monthsOfTheYear.map(month => {
+                return data.filter(item => item.AppointmentMonth.trim() === month).length;
+            }),
+            fill: true,
+
+            backgroundColor: 'rgba(59, 130, 246, 0.2)', // Azul suave
+            borderColor: 'rgba(59, 130, 246, 1)',
+            pointBorderColor: 'rgba(59, 130, 246, 1)',
+            pointBackgroundColor: '#fff',
+            // CORRIGIDO: Curvas mais suaves na linha.
+            tension: 0.4
+        }]
     };
 
-    $: {
-        const monthlyCounts = {};
-        monthsOfTheYear.forEach(month => {
-            monthlyCounts[month] = 0;
-        });
-
-        data.forEach(item => {
-            const month = item.AppointmentMonth.trim();
-            if (monthlyCounts[month] !== undefined) {
-                monthlyCounts[month]++;
+    // CORRIGIDO: Opções de estilo para um visual mais limpo.
+    let chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false, // Permite que o gráfico se ajuste melhor ao container.
+        plugins: {
+            legend: {
+                display: false // Legenda removida para um visual mais limpo, o título já é suficiente.
+            },
+            tooltip: {
+                backgroundColor: '#1e1e2f',
+                titleColor: '#fff',
+                bodyColor: '#ccc',
+                padding: 10,
+                cornerRadius: 4,
+                borderColor: 'rgba(59, 130, 246, 1)',
+                borderWidth: 1
             }
-        });
-
-        chartData = {
-            labels: monthsOfTheYear,
-            datasets: [{
-                label: 'Number of Appointments per Month',
-                data: Object.values(monthlyCounts), 
-                fill: false,
-                borderColor: 'rgb(75, 192, 192)',
-            }]
-        };
-    }
+        },
+        scales: {
+            x: {
+                ticks: { color: '#9CA3AF', font: { family: 'Poppins', size: 12 } },
+                // CORRIGIDO: Removida a linha de grade do eixo X.
+                grid: { 
+                    display: false 
+                }
+            },
+            y: {
+                ticks: { color: '#9CA3AF', font: { family: 'Poppins', size: 12 } },
+                // CORRIGIDO: Removida a linha de grade do eixo Y para um look minimalista.
+                grid: { 
+                    display: false 
+                },
+                border: {
+                    display: false // Remove a linha do eixo Y
+                }
+            }
+        }
+    };
 </script>
 
-<h3 class="text-center font-semibold mb-2">Monthly Appointment Trends</h3>
-{#if data.length > 0}
-    <Line {chartData} {chartOptions} />
-{:else}
-    <p class="text-center text-gray-500">No data to display for the current selection.</p>
-{/if}
+<h3 class="text-center text-gray-200 text-lg font-semibold mb-4">Tendência de Consultas por Mês</h3>
+
+<div class="h-64 rounded-xl bg-[#1e1e2f] p-4 shadow-lg">
+    <Line data={chartData} options={chartOptions} />
+</div>
