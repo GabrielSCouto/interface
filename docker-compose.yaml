@@ -1,4 +1,22 @@
+
 services:
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: meu-banco-postgres
+    hostname: postgres
+    env_file: .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    healthcheck: 
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
   ollama:
     image: ollama/ollama
     container_name: ollama
@@ -24,7 +42,10 @@ services:
       - ./public:/app/public
       - ./backend:/app/backend
     depends_on:
-      - ollama
+      postgres:
+        condition: service_healthy
+      ollama:
+        condition: service_started
     ports:
       - ${OPEN_WEBUI_PORT-8080}:8080
     environment:
@@ -35,14 +56,26 @@ services:
 
   pipelines:
       image: ghcr.io/open-webui/pipelines:main
+      container_name: pipelines
       volumes:
         - pipelines:/app/pipelines
       restart: always
+      depends_on:
+        - postgres
+        - ollama
+      env_file:
+      - .env
       environment:
         - PIPELINES_API_KEY=0p3n-w3bu!
+        - DB_HOST=postgres
+        - DB_PORT=5432
+        - DB_NAME=${POSTGRES_DB}
+        - DB_USER=${POSTGRES_USER}
+        - DB_PASS=${POSTGRES_PASSWORD}
+
 
 volumes:
+  postgres_data: {} 
   ollama: {}
   open-webui: {}
   pipelines: {}
-
