@@ -1,7 +1,5 @@
 # Interface de IA para Saúde - Projeto COMPET-CISAM/UPE
 
-> **Status:** 🚧 Em desenvolvimento 🚧
-
 ![Demonstração da Interface](https://raw.githubusercontent.com/compet-cisam/interface/main/static/upe.png)
 
 Este repositório contém o código-fonte de uma interface web customizada, baseada no [Open WebUI](https://github.com/open-webui/open-webui), para um projeto de Inteligência Artificial na área da saúde. A iniciativa é uma colaboração do grupo de extensão e pesquisa **COMPET** com o **Centro Integrado de Saúde Amaury de Medeiros (CISAM)** da **Universidade de Pernambuco (UPE)**, em Recife.
@@ -15,6 +13,7 @@ A plataforma foi adaptada para servir como um ambiente seguro e intuitivo para i
 * **Assistente Especializado:** Conecta-se a modelos de IA que podem ser treinados para fornecer apoio à decisão clínica, sumarizar documentos, e acessar rapidamente protocolos e literatura médica relevante.
 * **Foco no Usuário Clínico:** Componentes como o chat, entrada de texto e diálogos foram ajustados para as necessidades de um ambiente hospitalar.
 * **Potencial para Ensino:** A ferramenta pode ser usada como um ambiente de simulação para o treinamento de residentes e estudantes, permitindo a exploração segura de casos clínicos.
+* **Análise de prontuários médicos** Analisa prontuários médicos de forma simplificada na interface e retorna uma avaliação do paciente.
 
 ## 🛠️ Tecnologias Utilizadas
 
