@@ -64,10 +64,10 @@
     }
 </script>
 
-<h3 class="text-center text-white text-lg font-semibold mb-3">Ocorrência por Sintoma</h3>
 
 {#if data.length > 0}
     <div class="rounded-xl bg-[#1e1e2f] p-4 shadow-md">
+        <h3 class="text-center text-white text-lg font-semibold mb-3">Ocorrência por Sintoma</h3>
         <div class="max-h-[500px] overflow-y-auto min-h-[300px]" style="height: {data.length * 30}px">
             <Bar data={chartData} options={chartOptions} />
         </div>
