@@ -23,7 +23,7 @@ services:
     ports:
       - "11434:11434"
     volumes:
-      - /usr/share/ollama/.ollama:/root/.ollama
+      - ~/.ollama:/root/.ollama
     tty: true
     restart: unless-stopped
 
@@ -76,6 +76,5 @@ services:
 
 volumes:
   postgres_data: {} 
-  ollama: {}
   open-webui: {}
   pipelines: {}

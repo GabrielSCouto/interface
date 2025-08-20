@@ -1,101 +1,366 @@
-PatientID,Age,HealthArea,Symptom,DiagnosedDisease,RecommendedTreatment,AgeRange,AppointmentMonth,AppointmentYear
-Mulher 1,48,Histeroscopia Diagnóstica,Dor pélvica,Hiperplasia endometrial,Raspagem endometrial,45-54,Janeiro,2023
-Mulher 2,31,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Hiperplasia endometrial,Uso de hormônios,25-34,Fevereiro,2022
-Mulher 3,50,Odontologia,Sangramento gengival,Cárie dentária,Extração dentária,45-54,Março,2024
-Mulher 4,42,Odontologia,Mau hálito,Gengivite,Obturação,35-44,Abril,2021
-Mulher 5,36,Odontologia,Mau hálito,Gengivite,Extração dentária,35-44,Maio,2025
-Mulher 6,19,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Cirurgia histeroscópica,18-24,Junho,2023
-Mulher 7,27,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Mioma submucoso,Raspagem endometrial,25-34,Julho,2022
-Mulher 8,22,Planejamento Reprodutivo,Desejo de evitar gravidez,Endometriose,Consulta de orientação,18-24,Agosto,2024
-Mulher 9,49,Odontologia,Dor de dente,Gengivite,Canal,45-54,Setembro,2021
-Mulher 10,26,Histeroscopia Diagnóstica,Infertilidade,Hiperplasia endometrial,Acompanhamento clínico,25-34,Outubro,2025
-Mulher 11,33,Planejamento Reprodutivo,Dificuldade para engravidar,Síndrome do Ovário Policístico,Indução da ovulação,25-34,Novembro,2023
-Mulher 12,55,Odontologia,Sensibilidade nos dentes,Retração gengival,Enxerto gengival,55-64,Dezembro,2022
-Mulher 13,41,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44,Janeiro,2024
-Mulher 14,24,Planejamento Reprodutivo,Aconselhamento sobre métodos,Necessidade de contracepção,Inserção de DIU,18-24,Fevereiro,2021
-Mulher 15,62,Odontologia,Dificuldade de mastigação,Perda dentária,Implante dentário,55-64,Março,2025
-Mulher 16,38,Histeroscopia Diagnóstica,Sangramento uterino anormal,Pólipo endometrial,Polipectomia,35-44,Abril,2023
-Mulher 17,29,Odontologia,Dor de dente,Abscesso dentário,Drenagem e antibióticos,25-34,Maio,2022
-Mulher 18,51,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento excessivo,Miomectomia,45-54,Junho,2024
-Mulher 19,21,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Prescrição de pílulas,18-24,Julho,2021
-Mulher 20,45,Odontologia,Dente quebrado,Fratura dentária,Coroa dentária,45-54,Agosto,2025
-Mulher 21,35,Histeroscopia Diagnóstica,Dor pélvica,Endometriose,Videolaparoscopia,35-44,Setembro,2023
-Mulher 22,58,Odontologia,Dificuldade de mastigação,Perda dentária,Prótese total,55-64,Outubro,2022
-Mulher 23,28,Planejamento Reprodutivo,Ciclos menstruais irregulares,Síndrome do Ovário Policístico,Metformina,25-34,Novembro,2024
-Mulher 24,47,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Biópsia,45-54,Dezembro,2021
-Mulher 25,65,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste de prótese,65+,Janeiro,2025
-Mulher 26,32,Odontologia,Mau hálito,Periodontite,Raspagem de tártaro,25-34,Fevereiro,2023
-Mulher 27,20,Histeroscopia Diagnóstica,Ciclos menstruais irregulares,Dismenorreia,Uso de AINEs,18-24,Março,2022
-Mulher 28,39,Planejamento Reprodutivo,Infertilidade,Baixa reserva ovariana,Fertilização in vitro,35-44,Abril,2024
-Mulher 29,53,Odontologia,Desgaste dentário,Bruxismo,Placa de mordida,45-54,Maio,2021
-Mulher 30,44,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Lise de sinéquias,35-44,Junho,2025
-Mulher 31,68,Odontologia,Boca seca,Xerostomia,Uso de saliva artificial,65+,Julho,2023
-Mulher 32,25,Histeroscopia Diagnóstica,Sangramento pós-relação,Cervicite,Antibioticoterapia,25-34,Agosto,2022
-Mulher 33,37,Planejamento Reprodutivo,Desejo de evitar gravidez,Necessidade de contracepção,Laqueadura,35-44,Setembro,2024
-Mulher 34,49,Odontologia,Cárie,Restauração,Restauração de resina,45-54,Outubro,2021
-Mulher 35,30,Odontologia,Dente quebrado,Fratura coronária,Pino e coroa,25-34,Novembro,2025
-Mulher 36,56,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,55-64,Dezembro,2023
-Mulher 37,23,Histeroscopia Diagnóstica,Infertilidade,Obstrução tubária,Histerossalpingografia,18-24,Janeiro,2022
-Mulher 38,42,Planejamento Reprodutivo,Menstruação excessiva,Mioma uterino,Ablação endometrial,35-44,Fevereiro,2024
-Mulher 39,61,Odontologia,Sangramento gengival,Gengivite,Limpeza profissional,55-64,Março,2021
-Mulher 40,50,Histeroscopia Diagnóstica,Adenomiose,Cólicas incapacitantes,Uso de DIU hormonal,45-54,Abril,2025
-Mulher 41,26,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,25-34,Maio,2023
-Mulher 42,34,Histeroscopia Diagnóstica,Dor pélvica crônica,Aderências pélvicas,Lise de aderências,25-34,Junho,2022
-Mulher 43,52,Odontologia,Manchas nos dentes,Descoloração,Clareamento dental,45-54,Julho,2024
-Mulher 44,22,Odontologia,Dente do siso,Dor e inflamação,Exodontia,18-24,Agosto,2021
-Mulher 45,40,Planejamento Reprodutivo,Aconselhamento genético,Risco de doença hereditária,Consulta com geneticista,35-44,Setembro,2025
-Mulher 46,70,Odontologia,Perda de dentes,Edentulismo parcial,Prótese parcial removível,65+,Outubro,2023
-Mulher 47,31,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,25-34,Novembro,2022
-Mulher 48,46,Histeroscopia Diagnóstica,Sangramento uterino anormal,Hiperplasia endometrial,Biópsia endometrial,45-54,Dezembro,2024
-Mulher 49,28,Odontologia,Bruxismo,Desgaste dentário,Placa de mordida,25-34,Janeiro,2021
-Mulher 50,59,Histeroscopia Diagnóstica,Mioma submucoso,Sangramento,Miomectomia histeroscópica,55-64,Fevereiro,2025
-Mulher 51,36,Planejamento Reprodutivo,Dificuldade para engravidar,Fator masculino,Inseminação artificial,35-44,Março,2023
-Mulher 52,43,Odontologia,Sensibilidade,Hipersensibilidade dentinária,Aplicação de flúor,35-44,Abril,2022
-Mulher 53,64,Odontologia,Prótese antiga,Necessidade de troca,Nova prótese total,55-64,Maio,2024
-Mulher 54,27,Odontologia,Cárie dentária,Dor de dente,Restauração,25-34,Junho,2021
-Mulher 55,54,Histeroscopia Diagnóstica,Mioma submucoso,Ciclos menstruais irregulares,Miomectomia,45-54,Julho,2025
-Mulher 56,33,Planejamento Reprodutivo,Endometriose leve,Desejo de engravidar,Acompanhamento da ovulação,25-34,Agosto,2023
-Mulher 57,48,Odontologia,Periodontite,Mobilidade dentária,Raspagem subgengival,45-54,Setembro,2022
-Mulher 58,24,Planejamento Reprodutivo,Prevenção de ISTs,Comportamento de risco,Aconselhamento e exames,18-24,Outubro,2024
-Mulher 59,67,Odontologia,Prótese mal adaptada,Lesão na mucosa,Ajuste ou troca de prótese,65+,Novembro,2021
-Mulher 60,41,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento,Histeroscopia cirúrgica,35-44,Dezembro,2025
-Mulher 61,29,Histeroscopia Diagnóstica,Pólipo endometrial,Sangramento uterino anormal,Histeroscopia cirúrgica,25-34,Janeiro,2023
-Mulher 62,57,Odontologia,Extração,Indicação de exodontia,Extração simples,55-64,Fevereiro,2022
-Mulher 63,39,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Irregularidade menstrual,Uso de contraceptivo,35-44,Março,2024
-Mulher 64,25,Odontologia,Gengivite,Sangramento gengival,Instrução de higiene oral,25-34,Abril,2021
-Mulher 65,51,Histeroscopia Diagnóstica,Endometriose,Dor pélvica,Terapia hormonal,45-54,Maio,2025
-Mulher 66,32,Planejamento Reprodutivo,Infertilidade sem causa aparente,Infertilidade,Acompanhamento,25-34,Junho,2023
-Mulher 67,60,Odontologia,Implante,Avaliação para implante,Tomografia e planejamento,55-64,Julho,2022
-Mulher 68,20,Planejamento Reprodutivo,Aconselhamento,Início da vida sexual,Orientação sobre métodos,18-24,Agosto,2024
-Mulher 69,45,Odontologia,Canal,Dor de dente pulsátil,Tratamento endodôntico,45-54,Setembro,2021
-Mulher 70,37,Histeroscopia Diagnóstica,Hiperplasia endometrial,Sangramento irregular,Acompanhamento com ultrassom,35-44,Outubro,2025
-Mulher 71,58,Odontologia,Coroa fraturada,Necessidade de nova coroa,Confecção de nova coroa,55-64,Novembro,2023
-Mulher 72,27,Planejamento Reprodutivo,Desejo de engravidar,Aconselhamento pré-concepcional,Uso de ácido fólico,25-34,Dezembro,2022
-Mulher 73,42,Histeroscopia Diagnóstica,Mioma,Sangramento,Embolização de mioma,35-44,Janeiro,2024
-Mulher 74,31,Odontologia,Obturação,Cárie secundária,Troca de restauração,25-34,Fevereiro,2021
-Mulher 75,66,Odontologia,Revisão de prótese,Desgaste,Manutenção,65+,Março,2025
-Mulher 76,22,Histeroscopia Diagnóstica,Mioma submucoso,Menstruação excessiva,Uso de DIU hormonal,18-24,Abril,2023
-Mulher 77,49,Histeroscopia Diagnóstica,Pólipo,Sangramento,Polipectomia,45-54,Maio,2022
-Mulher 78,35,Planejamento Reprodutivo,Endometriose,Infertilidade,Estimulação ovariana,35-44,Junho,2024
-Mulher 79,63,Odontologia,Perda óssea dentária,Periodontite avançada,Cirurgia periodontal,55-64,Julho,2021
-Mulher 80,28,Histeroscopia Diagnóstica,Cisto ovariano,Dor abdominal,Acompanhamento por imagem,25-34,Agosto,2025
-Mulher 81,52,Odontologia,Limpeza,Profilaxia de rotina,Raspagem supragengival,45-54,Setembro,2023
-Mulher 82,21,Histeroscopia Diagnóstica,Pólipo cervical,Sangramento,Exérese de pólipo,18-24,Outubro,2022
-Mulher 83,47,Histeroscopia Diagnóstica,Espessamento endometrial,Sangramento,Biópsia,45-54,Novembro,2024
-Mulher 84,33,Odontologia,Extração dentária,Dente do siso incluso,Exodontia,25-34,Dezembro,2021
-Mulher 85,60,Planejamento Reprodutivo,Terapia de Reposição Hormonal,Sintomas da menopausa,TRH,55-64,Janeiro,2025
-Mulher 86,29,Planejamento Reprodutivo,Desejo de adiar maternidade,Congelamento de óvulos,Estimulação ovariana e coleta,25-34,Fevereiro,2023
-Mulher 87,54,Histeroscopia Diagnóstica,Adenomiose,Cólicas intensas,Uso de DIU hormonal,45-54,Março,2022
-Mulher 88,38,Planejamento Reprodutivo,Consulta de rotina,Check-up ginecológico,Exame preventivo,35-44,Abril,2024
-Mulher 89,44,Odontologia,Clareamento,Dentes amarelados,Clareamento a laser,35-44,Maio,2021
-Mulher 90,26,Odontologia,Limpeza profissional,Profilaxia,Raspagem e polimento,25-34,Junho,2025
-Mulher 91,55,Histeroscopia Diagnóstica,Mioma intramural,Aumento de volume abdominal,Acompanhamento,55-64,Julho,2023
-Mulher 92,30,Histeroscopia Diagnóstica,Sinéquias uterinas,Infertilidade,Histeroscopia cirúrgica,25-34,Agosto,2022
-Mulher 93,41,Odontologia,Restauração infiltrada,Sensibilidade,Troca de restauração,35-44,Setembro,2024
-Mulher 94,69,Odontologia,Ponte fixa,Avaliação de prótese,Ajuste e higiene,65+,Outubro,2021
-Mulher 95,24,Planejamento Reprodutivo,Síndrome do Ovário Policístico,Acne e irregularidade menstrual,Contraceptivo hormonal,18-24,Novembro,2025
-Mulher 96,50,Histeroscopia Diagnóstica,Rastreamento,Papanicolau,Exame preventivo,45-54,Dezembro,2023
-Mulher 97,34,Planejamento Reprodutivo,Dúvidas sobre DIU,Aconselhamento,Consulta de orientação,25-34,Janeiro,2022
-Mulher 98,46,Histeroscopia Diagnóstica,Espessamento endometrial,Pós-menopausa,Investigação com biópsia,45-54,Fevereiro,2024
-Mulher 99,28,Odontologia,Gengivite,Sangramento ao escovar,Orientação de higiene oral,25-34,Março,2021
-Mulher 100,72,Odontologia,Revisão de implantes,Check-up,Radiografia e avaliação,65+,Abril,2025
+PatientID;Age;HealthArea;Symptom;DiagnosedDisease;RecommendedTreatment;AgeRange;AppointmentMonth;AppointmentYear;FullDate
+1;37;Histeroscopia Diagnóstica;Desejo de engravidar + suspeita de um pólipo ;Endométrio padrão secretor;Sem dados;35-44;Março;2023;23/03/2023
+2;52;Histeroscopia Diagnóstica;Indisposição e cansaço;Pólipo endocervical e suspeita de mioma;Sem dados;45-54;Abril;2023;20/04/2023
+3;73;Histeroscopia Diagnóstica;Indicação cirúrgica ;Sem dados;Sem dados;65+;Fevereiro;2023;09/02/2023
+4;36;Histeroscopia Diagnóstica;Sangramento contínuo;Espessamento endometrial;Sem dados;35-44;Abril;2023;27/04/2023
+5;54;Histeroscopia Diagnóstica;Dores no baixo ventre + pólipos;Sem dados;Sem dados;45-54;Outubro;2023;05/10/2023
+6;63;Histeroscopia Diagnóstica;Sangramento na menopausa ;Pólipo endometrial + pólipo endocervical; mucometra por estenose cervical;55-64;Março;2023;02/03/2023
+7;68;Histeroscopia Diagnóstica;Nódulo no reto e no colo do útero ;Pólipo cervical e pólipo endometrial;Sem dados;65+;Março;2023;03/03/2023
+8;50;Histeroscopia Diagnóstica;Mioma;Leiomioma intramural (submucoso)?;Sem dados;45-54;Maio;2023;04/05/2023
+9;52;Histeroscopia Diagnóstica;Espessamento endometrial;Sem dados;Sem dados;45-54;Fevereiro;2023;24/02/2023
+10;55;Histeroscopia Diagnóstica;Cisto endométrio ;Sem dados;Sem dados;55-64;Setembro;2024;12/09/2024
+11;48;Histeroscopia Diagnóstica;Sangramento contínuo;Sem dados;Sem dados;45-54;Junho;2023;08/06/2023
+12;49;Histeroscopia Diagnóstica;Fluxo menstrual desconfortável;Pólipo endometrial e endocervical;Sem dados;45-54;Novembro;2023;23/11/2023
+13;59;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;55-64;Junho;2023;01/06/2023
+14;50;Histeroscopia Diagnóstica;Remoção de pólipos;Pólipo endometrial;Sem dados;45-54;Outubro;2023;05/10/2023
+15;51;Histeroscopia Diagnóstica;Menstruação longa / fluxo intenso;Pólipo endometrial e endocervical;Sem dados;45-54;Abril;2023;20/04/2023
+16;39;Histeroscopia Diagnóstica;dores e sangramentos iregulares;Leiomioma submucoso intramural.;Sem dados;35-44;Maio;2023;11/05/2023
+17;51;Histeroscopia Diagnóstica;Sangramento contínuo + Pólipos ;Pólipo endometrial e (endometrite? hiperplásico?);Sem dados;45-54;Março;2023;30/03/2023
+18;58;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;55-64;Maio;2023;10/05/2023
+19;76;Histeroscopia Diagnóstica;Sangramento na menopausa ;Sem dados;Sem dados;65+;Março;2023;30/03/2023
+20;61;Histeroscopia Diagnóstica;Dores intensas + infecção urinária;Sem dados;Sem dados;55-64;Novembro;2023;23/11/2023
+21;61;Histeroscopia Diagnóstica;Dores intensas + infecção urinária;Sem dados;Sem dados;55-64;Novembro;2023;23/11/2023
+22;42;Histeroscopia Diagnóstica;Sangramento exagerado + Policisto;Sem dados;Sem dados;35-44;Março;2024;30/03/2024
+23;60;Histeroscopia Diagnóstica;Dores intensas;USG ENDOVAGINAL;Sem dados;55-64;Agosto;2024;01/08/2024
+24;35;Histeroscopia Diagnóstica;REVERTER LIGAÇÃO TUBÁRIA;Sem dados;Sem dados;35-44;Março;2024;07/03/2024
+25;37;Histeroscopia Diagnóstica;Solicitação médica;Exame normal;Sem dados;35-44;Dezembro;2023;28/12/2023
+26;40;Histeroscopia Diagnóstica;Sangramento contínuo;Sem dados;Sem dados;35-44;Junho;2024;06/06/2024
+27;59;Histeroscopia Diagnóstica;Sangramento contínuo;Sem dados;Sem dados;55-64;Novembro;2024;14/11/2024
+28;44;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;35-44;Maio;2024;30/05/2024
+29;72;Histeroscopia Diagnóstica;sangramento na menopausa ;Sem dados;Sem dados;65+;Maio;2024;30/05/2024
+30;41;Histeroscopia Diagnóstica;Dores intensas +  sangramento contínuo;Espessamento endometrial;Sem dados;35-44;Dezembro;2023;21/12/2023
+31;46;Histeroscopia Diagnóstica;Pólipo endometrial + cólicas ;Pólipo endometrial;Sem dados;45-54;Julho;2024;11/07/2024
+32;57;Histeroscopia Diagnóstica;Indicação cirúrgica ;Sem dados;Sem dados;55-64;Julho;2024;25/07/2024
+33;74;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;65+;Dezembro;2023;28/12/2023
+34;44;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;35-44;Setembro;2024;12/09/2024
+35;48;Histeroscopia Diagnóstica;Sangramento contínuo + dores intensas;Sem dados;Sem dados;45-54;Novembro;2024;21/11/2024
+36;46;Histeroscopia Diagnóstica;Sangramento contínuo;Sem dados;Sem dados;45-54;Maio;2023;04/05/2023
+37;46;Histeroscopia Diagnóstica;Solicitação médica;Pólipo endometrial;Sem dados;45-54;Maio;2023;16/05/2023
+38;33;Histeroscopia Diagnóstica;Indicação cirúrgica + sangramento intenso;Sem dados;Sem dados;25-34;Junho;2024;06/06/2024
+39;37;Histeroscopia Diagnóstica;Desejo de engravidar  ;Mioma;Sem dados;35-44;Maio;2023;25/05/2023
+40;53;Histeroscopia Diagnóstica;Pólido menstrual;Sem dados;Sem dados;45-54;Julho;2023;27/07/2023
+41;55;Histeroscopia Diagnóstica;Sangramento contínuo;Pólipo endometrial;Sem dados;55-64;Junho;2023;22/06/2023
+42;53;Histeroscopia Diagnóstica;Dores intensas;Sem dados;Sem dados;45-54;Junho;2023;08/06/2023
+43;56;Histeroscopia Diagnóstica;Dores intensas;Pólipo endometrial e endometriose;Sem dados;55-64;Junho;2023;08/06/2023
+44;31;Histeroscopia Diagnóstica;Sangramento na relação sexual;Sem dados;Sem dados;25-34;Julho;2023;27/07/2023
+45;51;Histeroscopia Diagnóstica;Fluxo intenso + coágulo;Sem dados;Sem dados;45-54;Setembro;2024;19/09/2024
+56;52;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;45-54;Agosto;2023;24/08/2023
+47;59;Histeroscopia Diagnóstica;Indicação cirúrgica ;NÓDULOS MIOMATOSOS+LÍQUIDO NO INTERIOR DA CAVIDADE ENDOMETRIAL+PROCESSO INFLAMATÓRIO/INFECCIOSO;Sem dados;55-64;Julho;2023;13/07/2023
+48;60;Histeroscopia Diagnóstica;Indicação cirúrgica ;Perinioplastia +Suspensão de bexiga + Endometriose + Pólipo endometrial;Sem dados;55-64;Julho;2023;13/07/2023
+49;32;Histeroscopia Diagnóstica;Cistos simples ovário direito;Sem dados;Sem dados;25-34;Junho;2023;22/06/2023
+50;67;Histeroscopia Diagnóstica;Sangramento na menopausa + dores na pelve;Sem dados;Sem dados;65+;Junho;2023;22/06/2023
+51;56;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;55-64;Junho;2023;08/06/2023
+52;71;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;65+;Junho;2023;08/06/2023
+53;39;Histeroscopia Diagnóstica;Pólipo endometrial;Pólipo endometrial;Sem dados;35-44;Junho;2023;15/06/2023
+54;48;Histeroscopia Diagnóstica;Indicação cirúrgica + sangramento com dores abdominais intensas;Sem dados;Sem dados;45-54;Junho;2023;08/06/2023
+55;43;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;35-44;Junho;2023;22/06/2023
+56;40;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;35-44;Junho;2023;15/06/2023
+57;56;Histeroscopia Diagnóstica;Dores intensas;Sem dados;Sem dados;55-64;Junho;2023;15/06/2023
+58;46;Histeroscopia Diagnóstica;Solicitação médica;Pólipo endometrial;Sem dados;45-54;Janeiro;2024;25/01/2024
+59;59;Histeroscopia Diagnóstica;Nódulo uterino + espessamento;Espessamento endometrial;Sem dados;55-64;Julho;2023;06/07/2023
+60;52;Histeroscopia Diagnóstica;Indicação cirúrgica ;Sem dados;Sem dados;45-54;Dezembro;2024;12/12/2024
+61;50;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;45-54;Junho;2023;15/06/2023
+62;42;Histeroscopia Diagnóstica;Sangramento na relação sexual;Pólipo endometrial;Sem dados;35-44;Julho;2023;06/07/2023
+63;58;Histeroscopia Diagnóstica;Sangramento na menopausa ;Espessamento endometrial + mioma;Sem dados;55-64;Agosto;2023;03/08/2023
+64;53;Histeroscopia Diagnóstica;Exame de histeroscopia ;Sem dados;Sem dados;45-54;Julho;2023;06/07/2023
+65;51;Histeroscopia Diagnóstica;Pólipo ;Sem dados;Sem dados;45-54;Agosto;2023;10/08/2023
+66;63;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;55-64;Julho;2023;06/07/2023
+69;68;Histeroscopia Diagnóstica;ESPESSAMENTO ENDOMETRIAL;Sem dados;Sem dados;65+;Agosto;2023;03/08/2023
+70;47;Histeroscopia Diagnóstica;tenho polipo endometrial; SUA;Pólipo endometrial;45-54;Julho;2023;11/07/2023
+71;32;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;25-34;Julho;2023;06/07/2023
+72;46;Histeroscopia Diagnóstica;Solicitação médica;Pólipo endometrial;Sem dados;45-54;Maio;2025;15/05/2025
+73;35;Histeroscopia Diagnóstica;Pólipo + sangramento e dores;Sem dados;Sem dados;35-44;Julho;2023;13/07/2023
+74;36;Histeroscopia Diagnóstica;dores no útero + cólicas intensas;Sem dados;Sem dados;35-44;Fevereiro;2024;08/02/2024
+75;40;Histeroscopia Diagnóstica;Espessamento endometrial + Pólipo  ;Sem dados;Sem dados;35-44;Julho;2023;27/07/2023
+76;55;Histeroscopia Diagnóstica;Dores pélvicas constantes;Sem dados;Sem dados;55-64;Julho;2023;27/07/2023
+77;36;Histeroscopia Diagnóstica;Sangramento em ovário + coágulo;Sem dados;Sem dados;35-44;Maio;2024;02/05/2024
+78;67;Histeroscopia Diagnóstica;Espessamento endometrial  ;Sem dados;Sem dados;65+;Fevereiro;2024;01/02/2024
+79;72;Histeroscopia Diagnóstica;Sangramento na menopausa;Sem dados;Sem dados;65+;Julho;2023;10/07/2023
+80;66;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;65+;Julho;2023;06/07/2023
+81;55;Histeroscopia Diagnóstica;Mioma;Mioma;Sem dados;55-64;Janeiro;2024;25/01/2024
+82;54;Histeroscopia Diagnóstica;Dores no útero  ;Sem dados;Sem dados;45-54;Agosto;2023;03/08/2023
+83;58;Histeroscopia Diagnóstica;Pólipo ;Sem dados;Sem dados;55-64;Novembro;2023;30/11/2023
+84;43;Histeroscopia Diagnóstica;Sangramento contínuo;Sem dados;Sem dados;35-44;Julho;2023;20/07/2023
+85;52;Histeroscopia Diagnóstica;Indicação cirúrgica  ;Sem dados;Sem dados;45-54;Julho;2023;27/07/2023
+86;61;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;55-64;Junho;2024;20/06/2024
+87;53;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;45-54;Novembro;2023;09/11/2023
+88;50;Histeroscopia Diagnóstica;Dores intensas + Pólipo e Mioma;Pólipo endometrial e mioma;Sem dados;45-54;Fevereiro;2025;06/02/2025
+89;59;Histeroscopia Diagnóstica;Mioma;Mioma;Sem dados;55-64;Fevereiro;2024;15/02/2024
+90;42;Histeroscopia Diagnóstica;Solicitação médica;Sem dados;Sem dados;35-44;Maio;2024;09/05/2024
+91;58;Histeroscopia Diagnóstica;Espessamento endometrial + nódulo miometral sugestivo de linhagem leiomiomatose;Sem dados;Sem dados;55-64;Agosto;2023;03/08/2023
+92;67;Histeroscopia Diagnóstica;Dores intensas;Espessamento endometrial + pólipo;Sem dados;65+;Julho;2024;18/07/2024
+93;69;Histeroscopia Diagnóstica;Sangramento na menopausa;Sem dados;Sem dados;65+;Agosto;2023;17/08/2023
+94;73;Histeroscopia Diagnóstica;Sangramento anormal;Sem dados;Sem dados;65+;Agosto;2023;17/08/2023
+95;60;Histeroscopia Diagnóstica;Sangramento na menopausa + Pólipo;Sem dados;Sem dados;55-64;Julho;2023;13/07/2023
+96;64;Histeroscopia Diagnóstica;Sangramento uterino anormal;Sem dados;Sem dados;55-64;Agosto;2023;10/08/2023
+M1;54;Planejamento Reprodutivo;Inserção DIU Mirena;Mioma;Sem dados;45-54;Março;2023;09/03/2023
+M3;26;Planejamento Reprodutivo;Inserção DIU  ;Sem dados;Sem dados;25-34;Abril;2023;28/04/2023
+M4;31;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;25-34;Abril;2023;25/04/2023
+M5;25;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M6;24;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;18-24;Abril;2023;28/04/2023
+M8;31;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Abril;2023;20/04/2023
+M9;28;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;25-34;Abril;2023;20/04/2023
+M11;30;Planejamento Reprodutivo;Inserção DIU;Sem dados;Sem dados;25-34;Abril;2023;20/04/2023
+M13;31;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Abril;2023;20/04/2023
+M14;23;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;18-24;Abril;2023;20/04/2023
+M15;21;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;Maio;2023;15/05/2023
+M17;46;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M18;25;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M20;30;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M21;25;Planejamento Reprodutivo;Acompanhamento ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M22;32;Planejamento Reprodutivo;Sangramento;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M23;31;Planejamento Reprodutivo;Implanon;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M24;54;Planejamento Reprodutivo;Acompanhamento ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M25;26;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M26;23;Planejamento Reprodutivo;;Endometriose;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M27;44;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M28;26;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M29;41;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M31;23;Planejamento Reprodutivo;Retirada DIU;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M32;20;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;fevereiro;2023;06/02/2023
+M33;21;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;Março;2023;29/03/2023
+M34;21;Planejamento Reprodutivo;Dúvida ;Sem dados;Sem dados;65+;Sem dados;Sem dados;Sem dados
+M35;24;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;Março;2023;29/03/2023
+M36;29;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M37;35;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Março;2023;03/03/2023
+M38;23;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;18-24;Abril;2023;11/04/2023
+M39;31;Planejamento Reprodutivo;Laqueadura;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M40;28;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M41;22;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M42;42;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M43;29;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M44;34;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M46;27;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M47;30;Planejamento Reprodutivo;Dúvida ;Sem dados;Sem dados;25-34;Março;2023;28/03/2023
+M48;33;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Março;2023;10/03/2023
+M50;47;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;45-54;Maio;2023;02/05/2023
+M51;31;Planejamento Reprodutivo;Aborto espontâneo;Sem dados;Sem dados;25-34;Março;2023;21/03/2023
+M52;23;Planejamento Reprodutivo;;Sem dados;Sem dados;18-24;Março;2023;28/03/2023
+M53;48;Planejamento Reprodutivo;Troca DIU;Sem dados;Sem dados;45-54;Abril;2023;12/04/2023
+M54;30;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Março;2023;28/03/2023
+M55;25;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Abril;2023;27/04/23
+M56;28;Planejamento Reprodutivo;Laqueadura;Sem dados;Sem dados;25-34;Abril;2023;24/04/23
+M58;34;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M59;30;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M61;38;Planejamento Reprodutivo;Inserção DIU Mirena;Adenomiose;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M62;43;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Abril;2023;25/04/2023
+M63;41;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Março;2023;16/03/2023
+M64;35;Planejamento Reprodutivo;Gravidez;Sem dados;Sem dados;35-44;Março;2023;16/03/2023
+M65;21;Planejamento Reprodutivo;"Acompanhamento; Inserção DIU";Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M66;31;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M67;45;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M70;31;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Março;2023;30/03/2023
+M71;36;Planejamento Reprodutivo;Troca DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M73;26;Planejamento Reprodutivo;"Acompanhamento; Inserção DIU";Sem dados;Sem dados;25-34;Março;2023;30/03/2023
+M75;25;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M76;45;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M77;35;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M78;48;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;45-54;Abril;2023;26/04/2023
+M79;41;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M80;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Abril;2023;26/04/2023
+M81;23;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Abril;2023;26/04/2023
+M82;33;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Abril;2023;25/04/2023
+M83;50;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;45-54;Abril;2023;27/04/2023
+M84;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Abril;2023;26/04/2023
+M85;30;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M86;21;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Abril;2023;26/04/2023
+M87;24;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Abril;2023;28/04/2023
+M88;34;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Abril;2023;28/04/2023
+M89;31;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Abril;2023;28/04/2023
+M90;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;04/05/2023
+M93;24;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M94;29;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;04/05/2023
+M95;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M96;26;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;09/05/2023
+M97;20;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Maio;2023;09/05/2023
+M98;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M99;30;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Junho;2023;09/06/2023
+M100;37;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M101;30;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M102;43;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M103;36;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M104;39;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Maio;2023;11/05/2023
+M105;35;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Maio;2023;12/05/2023
+M106;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M107;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;15/05/2023
+M108;33;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M109;26;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;22/05/2023
+M110;39;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Maio;2023;22/05/2023
+M111;24;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M112;31;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M113;24;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Maio;2023;22/05/2023
+M114;33;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;22/05/2023
+M115;26;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Maio;2023;29/05/2023
+M116;35;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M117;37;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M118;33;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M119;29;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M120;29;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M121;30;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M122;40;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M123;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M124;44;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M125;35;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M126;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M127;27;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M128;41;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M129;27;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M130;18;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M131;20;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M132;41;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Agosto;2023;08/08/2023
+M133;28;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M134;21;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M135;21;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M136;27;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M137;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M138;22;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M139;24;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M140;25;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M141;43;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M142;29;Planejamento Reprodutivo;Opção 1;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M143;24;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M146;36;Planejamento Reprodutivo;Inserção DIU mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M188;22;Planejamento Reprodutivo;Sem dados;Endometriose;Diogenestese;18-24;Sem dados;Sem dados;Sem dados
+M211;22;Planejamento Reprodutivo;Sem dados;Endometriose;Diogenestese;18-24;Sem dados;Sem dados;Sem dados
+M222;21;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M261;49;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M282;27;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M289;22;Planejamento Reprodutivo;Não menstrua ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M293;32;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M396;36;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M406;32;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M419;32;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M431;25;Planejamento Reprodutivo;Sem dados;Endometriose;Dienogeste;25-34;Sem dados;Sem dados;Sem dados
+M451;28;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M482;27;Planejamento Reprodutivo;AMIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M520;24;Planejamento Reprodutivo;Sem dados;Endometriose;Dienogeste;18-24;Agosto;2024;09/08/2024
+M542;37;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;35-44;Novembro;2024;28/11/2024
+M574;24;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;18-24;Setembro;2024;25/09/2024
+M586;49;Planejamento Reprodutivo;Sem dados;Adenomiose;Sem dados;45-54;Setembro;2024;11/09/2024
+M587;53;Planejamento Reprodutivo;Não tem mestruação;Sem dados;Sem dados;45-54;Dezembro;2024;26/12/2024
+M607;35;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Outubro;2024;01/10/2024
+M629;50;Planejamento Reprodutivo;Não menstrua;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M731;27;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M732;19;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M733;18;Planejamento Reprodutivo;Inserção do inplanom;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M734;29;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M735;40;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M736;33;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M737;31;Planejamento Reprodutivo;revisão do DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M738;39;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M739;46;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M740;27;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M741;34;Planejamento Reprodutivo;Reversão tubária;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M742;23;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M743;32;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M744;45;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M745;25;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M746;23;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M747;38;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M748;36;Planejamento Reprodutivo;Troca do DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M749;27;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M750;23;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M751;29;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M752;29;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M753;21;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M754;20;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M755;29;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M756;46;Planejamento Reprodutivo;Laqueadura;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M757;45;Planejamento Reprodutivo;Troca de DIU ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M758;19;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M759;46;Planejamento Reprodutivo;implanon;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M760;26;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M761;28;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M762;24;Planejamento Reprodutivo;Troca DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M763;39;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M764;24;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M765;45;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M766;40;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M767;32;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M768;32;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M769;38;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M770;24;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M771;18;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M772;21;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M773;46;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M774;44;Planejamento Reprodutivo;Troca de DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M775;30;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M776;30;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M777;30;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M778;31;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M779;16;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-;Sem dados;Sem dados;Sem dados
+M780;46;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M781;53;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M782;27;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M783;35;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M784;22;Planejamento Reprodutivo;Inserção DIU;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M786;47;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M787;46;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M788;31;Planejamento Reprodutivo;Troca de DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M789;20;Planejamento Reprodutivo;Troca de DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M790;44;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M791;35;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M792;31;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M793;37;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M794;50;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M795;35;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M796;28;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M797;49;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M798;25;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M799;41;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M800;42;Planejamento Reprodutivo;Sem dados;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M801;33;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M802;39;Planejamento Reprodutivo;Acompanhamento;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M803;22;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M804;24;Planejamento Reprodutivo;Inserção do DIU;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M805;21;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M806;22;Planejamento Reprodutivo;implanon;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M807;31;Planejamento Reprodutivo;Revisão do Diu;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M808;20;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M809;32;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M810;35;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M811;42;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M812;17;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;18-;Sem dados;Sem dados;Sem dados
+M813;18;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M814;17;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-;Sem dados;Sem dados;Sem dados
+M815;26;Planejamento Reprodutivo;Inserção de DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M816;24;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M817;18;Planejamento Reprodutivo;implanon;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M818;50;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M819;41;Planejamento Reprodutivo;Troca de DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M820;20;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M821;35;Planejamento Reprodutivo;Sem dados;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M822;47;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M823;22;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M824;35;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M825;25;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M826;53;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M827;20;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M828;21;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M829;50;Planejamento Reprodutivo;Retirada do DIU;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M830;25;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M831;40;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M832;34;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M833;25;Planejamento Reprodutivo;Duvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M834;40;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M835;25;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M836;46;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M837;36;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M838;23;Planejamento Reprodutivo;Laqueadura;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M839;23;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M840;45;Planejamento Reprodutivo;Troca do DIU;Sem dados;Sem dados;45-54;Sem dados;Sem dados;Sem dados
+M841;42;Planejamento Reprodutivo;Revisão do DIU;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M842;37;Planejamento Reprodutivo;Inserção DIU Mirena;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M843;37;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M844;22;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M845;24;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M846;29;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M847;26;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M848;36;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
+M849;18;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M850;17;Planejamento Reprodutivo;Inserção DIU Mirena ;Sem dados;Sem dados;18-;Sem dados;Sem dados;Sem dados
+M851;31;Planejamento Reprodutivo;Dúvida;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M852;34;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M853;33;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;25-34;Sem dados;Sem dados;Sem dados
+M854;20;Planejamento Reprodutivo;Revisão do DIU ;Sem dados;Sem dados;18-24;Sem dados;Sem dados;Sem dados
+M855;41;Planejamento Reprodutivo;Inserção DIU ;Sem dados;Sem dados;35-44;Sem dados;Sem dados;Sem dados
