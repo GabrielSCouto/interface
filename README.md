@@ -13,7 +13,7 @@ A plataforma foi adaptada para servir como um ambiente seguro e intuitivo para i
 * **Assistente Especializado:** Conecta-se a modelos de IA que podem ser treinados para fornecer apoio à decisão clínica, sumarizar documentos, e acessar rapidamente protocolos e literatura médica relevante.
 * **Foco no Usuário Clínico:** Componentes como o chat, entrada de texto e diálogos foram ajustados para as necessidades de um ambiente hospitalar.
 * **Potencial para Ensino:** A ferramenta pode ser usada como um ambiente de simulação para o treinamento de residentes e estudantes, permitindo a exploração segura de casos clínicos.
-* **Análise de prontuários médicos** Analisa prontuários médicos de forma simplificada na interface e retorna uma avaliação do paciente.
+* **Análise de prontuários médicos:** Analisa prontuários médicos de forma simplificada na interface e retorna uma avaliação do paciente.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -38,24 +38,24 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     cd interface
     ```
 
-2.  **Configuração do Ambiente:**
-    Este projeto utiliza o `docker-compose.yaml` para orquestrar os serviços. Certifique-se de que o Docker esteja em execução na sua máquina.
+2.  **Crie o arquivo de ambiente:**
+    O projeto usa um arquivo `.env` para configurar variáveis de ambiente. Renomeie o arquivo de exemplo:
+    ```bash
+    mv .example.env .env
+    ```
+    *(\*Nota:\* Você pode editar o arquivo `.env` se precisar alterar alguma configuração, como as portas dos serviços).*
 
 3.  **(Opcional) Baixar o modelo Medgemma `medgemma-4b-it-Q8_0.gguf` do Hugging Face:**
-
     ```bash
     cd modelfiles/medgemma-4b-it-Q8_0
-    wget https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf
+    wget [https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf](https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf)
     ```
-
     <details>
     <summary>Como adicionar outros modelos:</summary>
 
-    1. Criar pasta para o modelo novo dentro da pasta **modelfiles**: `/modelfiles/nome_do_modelo_novo` (substituir nome_do_modelo_novo pelo nome desejado)
-
-    2. Dentro da pasta nova, criar um arquivo `Modelfile` contendo as instruções para a execução do modelo pelo Ollama &mdash; checar [documentação](https://ollama.readthedocs.io/en/modelfile/) do Ollama, ou Modelfile já existente em `/modelfiles/medgemma-4b-it-Q8_0`
-
-    3. Na pasta raiz, alterar o arquivo `entrypoint.sh` para incluir o modelo desejado (antes de 'wait'):
+    1.  Criar pasta para o modelo novo dentro da pasta **modelfiles**: `/modelfiles/nome_do_modelo_novo` (substituir nome_do_modelo_novo pelo nome desejado)
+    2.  Dentro da pasta nova, criar um arquivo `Modelfile` contendo as instruções para a execução do modelo pelo Ollama — checar [documentação](https://ollama.readthedocs.io/en/modelfile/) do Ollama, ou Modelfile já existente em `/modelfiles/medgemma-4b-it-Q8_0`
+    3.  Na pasta raiz, alterar o arquivo `entrypoint.sh` para incluir o modelo desejado (antes de 'wait'):
         ```bash
         [...]
 
@@ -63,17 +63,14 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
         
         wait
         ```
-
-    4. Rebuildar o ambiente e acessar a interface atualizada:
+    4.  Rebuildar o ambiente e acessar a interface atualizada:
         ```bash
         docker-compose down
         docker-compose up -d --build
         ```
-
         ```
         http://localhost:8080
         ```
-
     </details>
 
 4.  **Inicie os containers:**
@@ -88,7 +85,7 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     ```
     http://localhost:8080
     ```
-    *(A porta pode variar. Verifique o arquivo `docker-compose.yaml` se necessário).*
+    *(\*A porta pode variar. Verifique o arquivo `docker-compose.yaml` ou seu `.env` se necessário).*
 
 ## 🎯 Missão do Projeto
 
