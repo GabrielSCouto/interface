@@ -1380,11 +1380,26 @@
 																const messages = [
 																	{
 																		role: 'system',
-																		content: "Based on a user's input of a patient's symptoms, generate a better, descriptive prompt in Portuguese. Write only four prompt and do not write anything else. the prompts must be separated by a new line. Do not write any other text. ask the diagnosis in each prompt.",
+																		content: `Você é um assistente especializado em transformar perguntas médicas em prompts médicos mais específicos e úteis. Sua tarefa é gerar exatamente 4 prompts médicos diferentes a partir da pergunta fornecida. Cada prompt deve ser uma pergunta sobre diagnóstico, escrita em português.`
 																	},
 																	{
 																		role: 'user',
-																		content: prompt
+																		content: `INSTRUÇÕES OBRIGATÓRIAS - LEIA COM ATENÇÃO:
+
+																Transforme a pergunta abaixo em exatamente 4 prompts médicos diferentes em português.
+
+																REGRAS QUE VOCÊ DEVE SEGUIR:
+																1. Escreva APENAS os 4 prompts
+																2. Um prompt por linha  
+																3. Cada prompt deve ser uma pergunta sobre diagnóstico
+																4. NÃO escreva explicações, títulos, numeração ou texto adicional
+																5. NÃO responda a pergunta original
+																6. NÃO use markdown ou formatação
+
+																PERGUNTA PARA TRANSFORMAR:
+																"${prompt}"
+
+																RESPONDA APENAS COM 4 LINHAS DE PERGUNTAS:`
 																	}
 																];
 
