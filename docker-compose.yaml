@@ -17,6 +17,12 @@ services:
       timeout: 5s
       retries: 5
 
+  kokoro-fastapi-cpu:
+    ports:
+            - 8880:8880
+    image: ghcr.io/remsky/kokoro-fastapi-cpu
+    restart: always
+
   ollama:
     image: ollama/ollama
     container_name: ollama
@@ -52,6 +58,8 @@ services:
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='
       - 'NODE_OPTIONS=--max-old-space-size=8192'
+      - 'TTS_OPENAI_API_BASE_URL=http://kokoro-fastapi-cpu/v1'
+      - 'TTS_OPENAI_API_KEY=not-needed'
     restart: unless-stopped
 
   pipelines:
