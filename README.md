@@ -45,11 +45,14 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     ```
     *(\*Nota:\* Você pode editar o arquivo `.env` se precisar alterar alguma configuração, como as portas dos serviços).*
 
-3.  **(Opcional) Baixar o modelo Medgemma `medgemma-4b-it-Q8_0.gguf` do Hugging Face:**
+3.  **Baixar o modelo Medgemma `medgemma-4b-it-Q8_0.gguf` do Hugging Face:**
     ```bash
     cd modelfiles/medgemma-4b-it-Q8_0
     wget [https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf](https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf)
     ```
+
+4. **Adicionar o modelo dentro do container do ollama:**
+   ```docker exec -it <nome_do_container_ollama> ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile```
     <details>
     <summary>Como adicionar outros modelos:</summary>
 
@@ -73,14 +76,14 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
         ```
     </details>
 
-4.  **Inicie os containers:**
+5.  **Inicie os containers:**
     Na pasta raiz do projeto, execute o comando:
     ```bash
     docker-compose up -d --build
     ```
     * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
 
-5.  **Acesse a interface:**
+6.  **Acesse a interface:**
     Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
     ```
     http://localhost:8080
