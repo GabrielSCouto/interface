@@ -52,7 +52,10 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     ```
 
 4. **Adicionar o modelo dentro do container do ollama:**
-   ```docker exec -it <nome_do_container_ollama> ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile```
+   ```bash
+   docker exec -it <nome_do_container_ollama> ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
+   ```
+   
     <details>
     <summary>Como adicionar outros modelos:</summary>
 
@@ -76,20 +79,21 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
         ```
     </details>
 
-5.  **Inicie os containers:**
+6.  **Inicie os containers:**
     Na pasta raiz do projeto, execute o comando:
     ```bash
     docker-compose up -d --build
     ```
     * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
 
-6.  **Acesse a interface:**
+7.  **Acesse a interface:**
     Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
     ```
     http://localhost:8080
     ```
     *(\*A porta pode variar. Verifique o arquivo `docker-compose.yaml` ou seu `.env` se necessário).*
 
-## 🎯 Missão do Projeto
-
-O objetivo desta iniciativa é explorar o potencial da Inteligência Artificial generativa para criar ferramentas que aumentem a capacidade dos profissionais de saúde do CISAM, promovendo uma medicina mais ágil e baseada em dados, além de fomentar a inovação tecnológica no ambiente acadêmico da UPE.
+**ATENÇÃO:**
+   - O servidor ollama não deve estar rodando na sua maquina, esse processo dever ser feito através do docker compose.
+   - Não commitar diretamente na main.
+   - Qualquer problema ao tentar configurar o projeto na sua maquina, entre em contanto.
