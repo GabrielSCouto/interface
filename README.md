@@ -82,9 +82,19 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
 6.  **Inicie os containers:**
     Na pasta raiz do projeto, execute o comando:
     ```bash
-    docker-compose up -d --build
+    docker-compose up -d 
     ```
     * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
+  
+<details>
+   <summary>Caso não queira usar todos os containers</summary>
+
+**Para deixar o ambiente de desenvolvimento mais leve você pode inicializar apenas alguns containers necessários**
+ Na pasta raiz do projeto, execute o comando:
+    ```bash
+    docker compose up -d ollama open-webui 
+    ```
+</details>
 
 7.  **Acesse a interface:**
     Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
