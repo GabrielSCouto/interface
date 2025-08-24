@@ -88,7 +88,8 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     <details>
     <summary>Caso não queira usar todos os containers</summary>
 
-    - Para deixar o ambiente de desenvolvimento mais leve, você pode inicializar apenas os containers necessários. Na pasta raiz do projeto, execute o comando: 
+    - Para deixar o ambiente de desenvolvimento mais leve, você pode inicializar apenas os containers necessários. Na pasta raiz do projeto, execute o comando:
+      
     ```bash
     docker compose up -d ollama open-webui
     ```
