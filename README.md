@@ -43,7 +43,7 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     ```bash
     mv .example.env .env
     ```
-    *(\*Nota:\* Você pode editar o arquivo `.env` se precisar alterar alguma configuração, como as portas dos serviços).*
+    *(\*Nota: Você pode editar o arquivo `.env` se precisar alterar alguma configuração, como as portas dos serviços).*
 
 3.  **Baixar o modelo Medgemma `medgemma-4b-it-Q8_0.gguf` do Hugging Face:**
     ```bash
@@ -51,52 +51,50 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     wget [https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf](https://huggingface.co/kelkalot/medgemma-4b-it-GGUF/resolve/main/medgemma-4b-it-Q8_0.gguf)
     ```
 
-4. **Adicionar o modelo dentro do container do ollama:**
-   ```bash
-   docker exec -it <nome_do_container_ollama> ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
-   ```
-   
+4.  **Adicionar o modelo dentro do container do Ollama:**
+    ```bash
+    docker exec -it <nome_do_container_ollama> ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
+    ```
+
     <details>
     <summary>Como adicionar outros modelos:</summary>
 
-    1.  Criar pasta para o modelo novo dentro da pasta **modelfiles**: `/modelfiles/nome_do_modelo_novo` (substituir nome_do_modelo_novo pelo nome desejado)
-    2.  Dentro da pasta nova, criar um arquivo `Modelfile` contendo as instruções para a execução do modelo pelo Ollama — checar [documentação](https://ollama.readthedocs.io/en/modelfile/) do Ollama, ou Modelfile já existente em `/modelfiles/medgemma-4b-it-Q8_0`
-    3.  Na pasta raiz, alterar o arquivo `entrypoint.sh` para incluir o modelo desejado (antes de 'wait'):
-        ```bash
-        [...]
+    1. Criar pasta para o modelo novo dentro da pasta **modelfiles**: `/modelfiles/nome_do_modelo_novo` (substituir `nome_do_modelo_novo` pelo nome desejado).
+    2. Dentro da pasta nova, criar um arquivo `Modelfile` contendo as instruções para a execução do modelo pelo Ollama — checar a [documentação do Ollama](https://ollama.readthedocs.io/en/modelfile/) ou o `Modelfile` já existente em `/modelfiles/medgemma-4b-it-Q8_0`.
+    3. Na pasta raiz, alterar o arquivo `entrypoint.sh` para incluir o modelo desejado (antes de `wait`):
+       ```bash
+       [...]
 
-        ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
-        
-        wait
-        ```
-    4.  Rebuildar o ambiente e acessar a interface atualizada:
-        ```bash
-        docker-compose down
-        docker-compose up -d --build
-        ```
-        ```
-        http://localhost:8080
-        ```
+       ollama create nome_do_modelo_novo -f /modelfiles/nome_do_modelo_novo/Modelfile
+       
+       wait
+       ```
+    4. Rebuildar o ambiente e acessar a interface atualizada:
+       ```bash
+       docker-compose down
+       docker-compose up -d --build
+       ```
+       Acesse: `http://localhost:8080`
+
     </details>
 
-6.  **Inicie os containers:**
+5.  **Inicie os containers:**
     Na pasta raiz do projeto, execute o comando:
     ```bash
-    docker-compose up -d 
+    docker-compose up -d
     ```
-    * O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).
-  
-<details>
-   <summary>Caso não queira usar todos os containers</summary>
+    *O comando irá construir as imagens dos containers e iniciá-los em background (`-d`).*
 
-**Para deixar o ambiente de desenvolvimento mais leve você pode inicializar apenas alguns containers necessários**
- Na pasta raiz do projeto, execute o comando:
+    <details>
+    <summary>Caso não queira usar todos os containers</summary>
+
+    Para deixar o ambiente de desenvolvimento mais leve, você pode inicializar apenas os containers necessários. Na pasta raiz do projeto, execute o comando:
     ```bash
-    docker compose up -d ollama open-webui 
+    docker compose up -d ollama open-webui
     ```
-</details>
+    </details>
 
-7.  **Acesse a interface:**
+6.  **Acesse a interface:**
     Após a inicialização, a interface estará disponível no seu navegador. Acesse o endereço:
     ```
     http://localhost:8080
@@ -104,6 +102,6 @@ Siga os passos abaixo para ter a interface rodando em sua máquina.
     *(\*A porta pode variar. Verifique o arquivo `docker-compose.yaml` ou seu `.env` se necessário).*
 
 **ATENÇÃO:**
-   - O servidor ollama não deve estar rodando na sua maquina, esse processo dever ser feito através do docker compose.
-   - Não commitar diretamente na main.
-   - Qualquer problema ao tentar configurar o projeto na sua maquina, entre em contanto.
+- O servidor Ollama não deve estar rodando na sua máquina; esse processo deve ser feito através do Docker Compose.
+- Não commitar diretamente na branch `main`.
+- Qualquer problema ao tentar configurar o projeto na sua máquina, entre em contato.
